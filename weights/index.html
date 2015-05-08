@@ -1,20 +1,155 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/lodash/3.8.0/lodash.min.js"></script>
 
 <style>
   body{
     margin: 0px;
     padding: 0px;
-    overflow: hidden;
+    text-align: center
+  }
+
+  input{
+    height: 50px;
+    border-radius: 10px;
+    font-size: 30px;
+    text-align: center;
+    width: 100px;
+    position: relative;
+    top: -50px;
+    left: 10px;
+  }
+
+  .section {
+    padding-top: 30px;
+    height: 120px;
+  }
+
+  .image {
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    position: relative;
+    top: -10px;
+  }
+
+  .expand {
+    height: 100%;
+  }
+
+  .dumbbell {
+      background-image: url('dumbbell.png');
+  }
+
+  .target {
+      background-image: url('target.png');
+  }
+
+  .gray {
+    background-color: #DDD;
+  }
+
+  .red {
+    background-color: rgb(244, 177, 168);
+  }
+
+  .green {
+    background-color: rgb(183, 228, 183);
+  }
+
+  #plate-weight{
+    font-size: 30px;
+    line-height: 50px;
+    font-weight: bold;
   }
 </style>
 
 <html>
   <body>
+    <div class="section gray">
+      <div class="image dumbbell"></div>
+      <input type="text" id="bar-weight" value="35"></input>
+    </div>
+
+    <div class="section red">
+      <div class="image target"></div>
+      <input type="text" id="target-weight" value="180"></input>
+    </div>
+
+    <div class="section green expand">
+      <span id="plate-weight"></span>
+    </div>
 
   </body>
 
   <script>
     $(document).ready(function () {
+      var $barWeight = $("#bar-weight");
+      var $targetWeight = $("#target-weight");
+      var PLATES = [45, 35, 25, 10, 5, 2.5];
+
+      var computeWeight = function (plates, barWeight, targetWeight) {
+        var plateWeight = (targetWeight - barWeight) / 2;
+        var plates = [45, 35, 25, 10, 5, 2.5];
+        var counts = [0, 0, 0, 0, 0, 0];
+        var i = 0;
+
+        while (plateWeight > 0 && i < plates.length) {
+          if (plateWeight >= plates[i]) {
+            plateWeight -= plates[i];
+            counts[i]++;
+          } else {
+            i++;
+          }
+        }
+
+        if (plateWeight !== 0) {
+            return undefined;
+        }
+
+        return counts;
+      };
+
+      var displayWeightString = function (plates, counts) {
+        var out = "";
+        var i;
+
+        if (!counts){
+          out = "This weight is not possible";
+        } else {
+          for (i = 0; i < counts.length; i++) {
+              if (counts[i] > 0) {
+                out += 2 * counts[i] + " x " + plates[i] + "<br>";
+              }
+          }
+        }
+        $("#plate-weight").html(out);
+      };
+
+      var refresh = function () {
+        counts = computeWeight(PLATES, $barWeight.val(), $targetWeight.val());
+        displayWeightString(PLATES, counts);
+      }
+
+      $targetWeight.keyup(function(){
+        refresh();
+      });
+
+      $barWeight.keyup(function(){
+        refresh();
+      });
+
+      refresh();
+
+      // TESTS
+      if (!_.isEqual(computeWeight(PLATES, 35, 200), [1, 1, 0, 0, 0, 1])) {
+          console.log("TEST FAILED");
+      }
+
+      if (!_.isEqual(computeWeight(PLATES, 35, 300), [2, 1, 0, 0, 1, 1])) {
+          console.log("TEST FAILED");
+      }
 
     });
   </script>
