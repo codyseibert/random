@@ -1,0 +1,80 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+<style>
+  body{
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+  }
+
+  #man{
+    background-image: url('man.png');
+    width: 263px;
+    height: 338px;
+  }
+
+  .arm{
+    background-image: url('arm.png');
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 0px;
+    left: 86px;
+  }
+</style>
+
+<html>
+  <body>
+      <div id='man'></div>
+  </body>
+
+  <script>
+    $(document).ready(function () {
+
+      var splitArm = function (arm) {
+        arms.push(new Arm());
+      };
+
+      var Arm = function () {
+          this.rotation = 0;
+          this.left = Math.random() * 500;
+          this.top = Math.random() * 500;
+          this.spin = Math.random() * 20;
+          this.$ = $("<div></div>");
+          this.$.addClass('arm');
+          this.$.click(splitArm);
+          $("body").append(this.$);
+      }
+
+      var arms = [];
+      arms.push(new Arm());
+
+      // $(document).keydown(function (event) {
+      //   var key = event.keyCode;
+      //
+      //   if (key === 38) { // The user pressed the up arrow
+      //     rotation += 5;
+      //   } else if (key === 40) { // The user pressed the down arrow
+      //     rotation -= 5;
+      //   }
+      //
+      //   $("#arm").css('-webkit-transform', 'rotate(' + rotation + 'deg)');
+      // });
+
+      setInterval(function(){
+
+        for (var i in arms) {
+            var arm = arms[i];
+            arm.rotation += Math.random() * arm.spin;
+            arm.left += Math.random() * 2 - 1;
+            arm.top += Math.random() * 2 - 1;
+            arm.$.css('-webkit-transform', 'rotate(' + arm.rotation + 'deg)');
+            arm.$.css('top', arm.top + 'px');
+            arm.$.css('left', arm.left + 'px');
+        }
+      }, 1);
+
+
+    });
+  </script>
+</html>
