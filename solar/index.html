@@ -1,0 +1,104 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="genetic.js"></script>
+
+<style>
+  body{
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+  }
+  
+  .panel {
+	width: 10px;
+	height: 100px;
+	background-color: red;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+  }
+  
+  .marker {
+	width: 20px;
+	height: 3px;
+	background-color: black;
+	position: absolute;
+	left: -20px;
+	top: 50px;
+  }
+  
+  #sun {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 300px;
+	top: 300px;
+	background-color: yellow;
+	border-radius: 90%;
+  }
+</style>
+
+<html>
+  <body>
+	<div id="sun"></div>
+  </body>
+
+  <script>
+    $(document).ready(function () {
+		
+		var sunX = $("#sun").position().left + $("#sun").width() / 2;
+		var sunY = $("#sun").position().top + $("#sun").height() / 2;
+		
+		var angleTo = function (p1, p2) {
+			return parseInt(Math.atan2(p2.y - p1.y, p2.x - p1.x) * 180 / Math.PI);
+		};
+		
+		var $Panel = function () {
+			this.panel = new Panel()
+			this.$ = $("<div></div>");
+			this.$.addClass("panel");
+			var $o = $("<div></div>")
+			$o.addClass("marker");
+			this.$.append($o);
+			$("body").append(this.$);
+			this.$.offset({
+				left: 300 + parseInt(Math.random() * 400) - 200 + 100,
+				top: 300 + parseInt(Math.random() * 400) - 200 + 100
+			});
+			console.log(this.$.position());
+			
+			var panelX = this.$.position().left + this.$.width() / 2;
+			var panelY = this.$.position().top +  + this.$.height() / 2;
+			var desiredAngle = angleTo({x: sunX, y: sunY}, {x: panelX, y: panelY});
+		
+			this.fitness = function (panel) {
+				return Math.abs(panel.angle - desiredAngle);
+			};
+		};
+
+		var Panel = function () {
+			this.angle = parseInt(Math.random() * 360);
+			
+			this.encode = function () {
+				return [
+					this.angle
+				];
+			};
+			
+			this.decode = function (chromosome) { 
+				this.angle = chromosome.data[0];
+			};
+		};
+		
+		var setAngle = function ($panel, panel) {
+			$panel.$.css('-webkit-transform', 'rotate(' + panel.angle + 'deg)');
+		}
+		
+		for (var i = 0; i < 10; i++) {
+			var $p = new $Panel();
+			var best = Genetic.train(Panel, 50, 1000, $p.fitness);
+			console.log(best);
+			setAngle($p, best)
+		}
+    });
+  </script>
+</html>
