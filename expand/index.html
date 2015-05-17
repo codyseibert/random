@@ -1,0 +1,61 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/lodash/3.8.0/lodash.min.js"></script>
+
+<style>
+  body{
+    margin: 0px;
+    padding: 0px;
+    text-align: center
+  }
+
+  .link{
+    padding: 10px;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+  }
+</style>
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  </head>
+
+  <body>
+    <div class="link">Home</div><br>
+    <div class="link">About</div><br>
+    <div class="link">Testing</div><br>
+    <div class="link">Vagrant</div><br>
+    <div class="link">How</div><br>
+    <div class="link">Something</div><br>
+  </body>
+
+  <script>
+    $(document).ready(function () {
+      $(document).mousemove(function(e){
+          var pageX = e.pageX;
+          var pageY = e.pageY;
+
+          $('.link').each(function() {
+            var x = $(this).offset().left;
+            x += $(this).width() / 2;
+            var y = $(this).offset().top;
+            y += $(this).height() / 2;
+            var dx = Math.abs(pageX - x);
+            var dy = Math.abs(pageY - y);
+            var distance = Math.sqrt(dx*dx + dy*dy);
+
+            var MAX_DIST = 100;
+            var MAX_FONT = 60;
+            var MIN_FONT = 20;
+            if (distance < MAX_DIST) {
+              var inv = (MAX_DIST - distance) / MAX_DIST
+              var fontSize = Math.max(MIN_FONT, inv * MAX_FONT);
+              $(this).css('font-size', fontSize);
+            }
+
+          });
+      });
+    });
+  </script>
+</html>

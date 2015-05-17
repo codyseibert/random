@@ -1,0 +1,65 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/lodash/3.8.0/lodash.min.js"></script>
+
+<style>
+  body{
+    margin: 0px;
+    padding: 0px;
+    text-align: center
+  }
+
+  .time{
+    font-size: 50px;
+  }
+
+  .red{
+      background-color: red;
+  }
+
+  .blue{
+      background-color: blue;
+  }
+
+  .hellow{
+      font-size: 100px;
+  }
+</style>
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  </head>
+
+  <body>
+    <div id="time">hi</div>
+    <div class="yo">a</div>
+    <div class="yo blue">c</div>
+    <div class="yo red">c</div>
+    <div class="yo red">d</div>
+    <div class="yo red">e</div>
+    <div class="yo red">f</div>
+    <div class="yo red">g</div>
+    <div class="yo red">asdf</div>
+    <div class="yo red">asdf</div>
+    <div class="yo blue">asdf</div>
+    <div class="yo">asdf</div>
+  </body>
+
+  <script>
+    $(document).ready(function () {
+
+      setTimeout(function(){
+
+        $(".red")
+          .removeClass("red")
+          .addClass("blue hellow")
+
+      }, 1000);
+
+      // setInterval(function(){
+      //   $("#time").html(new Date());
+      // }, 1000);
+
+    });
+  </script>
+</html>
