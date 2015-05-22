@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Force Layout Example 1</title>
+    <style>
+      body{
+        padding: 0px;
+        margin: 0px;
+        width: 2000px;
+        height: 2000px;
+      }
+
+      .node {
+          fill: #ccc;
+          stroke: #fff;
+          stroke-width: 2px;
+      }
+
+      .link {
+          stroke: #777;
+          stroke-width: 2px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script src='http://d3js.org/d3.v3.min.js'></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
+    <script>
+
+      $(document).ready(function () {
+
+        $.getJSON('json/stocks.json', function (pData) {
+          var stocks = pData;
+          var index = 0;
+          var nodes = [];
+          var links = [];
+          var count = 0;
+
+          var RADIUS = 100;
+
+          var width = 5000,
+              height = 5000,
+              padding = 20, // separation between nodes
+              maxRadius = RADIUS;
+
+          var n = 200, // total number of nodes
+              m = 10; // number of distinct clusters
+
+
+          var color = d3.scale.category10()
+              .domain(d3.range(m));
+
+          var x = d3.scale.ordinal()
+              .domain(d3.range(m))
+              .rangePoints([0, width], 1);
+
+          var max = 0;
+          var min = 0;
+
+          // removes
+          var deletes = [
+            'FSG',
+            'CODE',
+            'FST',
+            'SNTS',
+            'PNG'
+          ];
+          for (var i = 0; i < deletes.length; i++) {
+              delete stocks[deletes[i]];
+          }
+
+          for (var key in stocks) {
+            var stock = stocks[key][index];
+            for (var i = 1; i < stocks[key].length; i++) {
+              stock.close += stocks[key][i].close;
+            }
+
+            if (!isNumeric(stock.close)) {
+              stock.close = 0;
+            }
+            max = Math.max(max, stock.close);
+            min = Math.min(min, stock.close);
+
+            stock.symbol = key;
+            stock.cx = width / 2;
+            stock.cy = height / 2;
+            stock.x = Math.random() * 50000;
+            stock.y = Math.random() * 50000;
+            var i = Math.floor(Math.random() * m)
+            var v = (i + 1) / m * -Math.log(Math.random())
+            // stock.radius = Math.sqrt(v) * maxRadius;
+            stock.color = color(i);
+
+            nodes.push(stock)
+
+            if (count++ > 2000) break;
+          }
+
+          for (var i = 0; i < nodes.length; i++) {
+            var node = nodes[i];
+            node.close = (node.close - min) / (max - min)
+            node.radius = calcRadius(node);
+          }
+
+          // var nodes = d3.range(n).map(function() {
+          //   var i = Math.floor(Math.random() * m),
+          //       v = (i + 1) / m * -Math.log(Math.random());
+          //   return {
+          //     radius: Math.sqrt(v) * maxRadius,
+          //     color: color(i),
+          //     cx: x(i),
+          //     cy: height / 2
+          //   };
+          // });
+          function isNumeric(n) {
+            return !isNaN(parseFloat(n)) && isFinite(n);
+          }
+
+          function calcRadius(d) {
+            return Math.max(5, d.close * RADIUS);
+          }
+
+          var force = d3.layout.force()
+              .nodes(nodes)
+              .size([width, height])
+              .gravity(0)
+              .charge(0)
+              .on("tick", tick)
+              .start();
+
+          var svg = d3.select("body").append("svg")
+              .attr("width", width)
+              .attr("height", height);
+
+          var g = svg.selectAll("circle")
+              .data(nodes)
+            .enter().append("g");
+
+          var circle = g.append('circle')
+              .attr("r", function(d) { return d.radius; })
+              .style("fill", function(d) { return d.color; })
+              .call(force.drag);
+
+          var text = g.append('text')
+            .text(function(d) { return d.symbol; });
+
+          function tick(e) {
+            circle
+                .each(gravity(.2 * e.alpha))
+                .each(collide(.5))
+                .attr("cx", function(d) { return d.x; })
+                .attr("cy", function(d) { return d.y; });
+
+            text
+              .attr('x', function(d) { return d.x; })
+              .attr('y', function(d) { return d.y; })
+          }
+
+          // Move nodes toward cluster focus.
+          function gravity(alpha) {
+            return function(d) {
+              d.y += (d.cy - d.y) * alpha * d.close;
+              d.x += (d.cx - d.x) * alpha * d.close;
+            };
+          }
+
+          // Resolve collisions between nodes.
+          function collide(alpha) {
+            var quadtree = d3.geom.quadtree(nodes);
+            return function(d) {
+              var r = d.radius + maxRadius + padding,
+                  nx1 = d.x - r,
+                  nx2 = d.x + r,
+                  ny1 = d.y - r,
+                  ny2 = d.y + r;
+              quadtree.visit(function(quad, x1, y1, x2, y2) {
+                if (quad.point && (quad.point !== d)) {
+                  var x = d.x - quad.point.x,
+                      y = d.y - quad.point.y,
+                      l = Math.sqrt(x * x + y * y),
+                      r = d.radius + quad.point.radius + (d.color !== quad.point.color) * padding;
+                  if (l < r) {
+                    l = (l - r) / l * alpha;
+                    d.x -= x *= l;
+                    d.y -= y *= l;
+                    quad.point.x += x;
+                    quad.point.y += y;
+                  }
+                }
+                return x1 > nx2 || x2 < nx1 || y1 > ny2 || y2 < ny1;
+              });
+            };
+          }
+
+        });
+      });
+    </script>
+  </body>
+</html>
