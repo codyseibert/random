@@ -70,11 +70,28 @@
           for (var i = 0; i < deletes.length; i++) {
               delete stocks[deletes[i]];
           }
-
+          var count = 0;
           for (var key in stocks) {
+            if (count++ < 4000) continue;
             var stock = stocks[key][index];
+            if (!stock) continue;
+            
+            if (!stock.close || !isNumeric(stock.close)) {
+              stock.close = 0;
+            } else {
+              if (stock.close > 0) {
+                stock.close = 1;
+              } else {
+                stock.close = -1;
+              }
+            }
+
             for (var i = 1; i < stocks[key].length; i++) {
-              stock.close += stocks[key][i].close;
+              if (stocks[key][i].close.close > 0) {
+                stock.close += 1;
+              } else {
+                stock.close += -1;
+              }
             }
 
             if (!isNumeric(stock.close)) {
@@ -93,15 +110,21 @@
             // stock.radius = Math.sqrt(v) * maxRadius;
             stock.color = color(i);
 
+
             nodes.push(stock)
 
-            if (count++ > 2000) break;
+            if (count > 6000) break;
           }
 
           for (var i = 0; i < nodes.length; i++) {
             var node = nodes[i];
             node.close = (node.close - min) / (max - min)
             node.radius = calcRadius(node);
+            if (node.close < 0.5) {
+              node.color = d3.rgb(255 * node.close, 0, 0);
+            } else {
+              node.color = d3.rgb(0, 255 * node.close, 0);
+            }
           }
 
           // var nodes = d3.range(n).map(function() {
