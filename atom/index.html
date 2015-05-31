@@ -3,23 +3,48 @@
   <head>
     <meta charset='utf-8'>
     <title>Force Layout Example 1</title>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
 
-  <body>
+  <body style="text-align: center;">
 
-    <div style="position: relative; display: inline-block; left: 200px; top: 200px;">
-      <svg class="atom" height="400" width="400" style="position: absolute; left: -125px; top: -156px;">
+    <div class="container-fluid">
 
-      </svg>
+      <div class="col-md-4">
 
-      <svg width="500" height="100" style="position: absolute; z-index: 10;">
-        <text x="0" y="60" fill="black" font-size="70">C&nbsp;&nbsp;&nbsp;dySeibert.com</text>
-      </svg>
+        <div class="nav">
+
+          <svg class="atom" height="400" width="400"
+               style="display: inline-block; position: absolute; left: -125px; top: -156px;">
+
+          </svg>
+
+          <svg class="cody" width="500" height="100" style="display: inline-block; z-index: 10;">
+            <text x="0" y="60" fill="white" font-size="70">C&nbsp;&nbsp;&nbsp;dySeibert.com</text>
+          </svg>
+
+          <div class="content" style="text-align: right;">
+            <div class="link" data-color="green">Projects</div><br>
+            <div class="link" data-color="red">Climbing</div><br>
+            <div class="link" data-color="blue">Music</div><br>
+            <div class="link" data-color="orange">Contact</div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-md-8 panel">
+        asdfsadf
+      </div>
+
     </div>
 
     <script src='http://d3js.org/d3.v3.min.js'></script>
     <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
+    <script src='bower_components/bootstrap/dist/js/bootstrap.js'></script>
+
     <script src='js/source.js'></script>
   </body>
 </html>

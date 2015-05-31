@@ -1,0 +1,19 @@
+{
+  "name": "atom",
+  "version": "0.0.0",
+  "homepage": "https://github.com/codyseibert/random",
+  "authors": [
+    "Cody Seibert <cseibert113@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4"
+  }
+}

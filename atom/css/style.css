@@ -2,5 +2,80 @@ body{
   padding: 0px;
   margin: 0px;
   overflow: hidden;
+  background-color: #000;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
+  padding: 0px;
+  margin: 0px;
+}
+.panel.white{
   background-color: #EEE;
+}
+.panel.green {
+  background-color: rgb(175, 255, 222);
+}
+.panel.red{
+  background-color: rgb(255, 223, 232);
+}
+.panel.blue{
+  background-color: rgb(194, 197, 255);
+}
+.panel.orange{
+  background-color: rgb(255, 236, 200);
+}
+
+.panel {
+    -webkit-transition: background-color 1s;
+    transition: background-color 1s;
+    background-color: black;
+    height: 800px;
+    z-index: -1
+}
+
+.nav {
+    -webkit-transition: top 1s, left 1s, opacity 4s;
+    transition: top 1s, left 1s, opacity 4s;
+    position: absolute;
+    opacity: 0;
+    float: left;
+}
+
+.cody {
+    -webkit-transition: opacity 2s;
+    transition: opacity 2s;
+    opacity: 0;
+}
+
+.link {
+    -webkit-transition: opacity 2s, font-size 0.5s;
+    transition: opacity 2s, font-size 0.5s;
+    opacity: 0;
+    font-size: 40px;
+    margin-bottom: 20px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.link.over{
+    font-size: 60px;
+}
+
+.link.active{
+    font-weight: bold;
+}
+
+.green {
+    color: rgb(14, 171, 106);
+}
+
+.red {
+    color: rgb(255, 0, 77);
+}
+
+.orange {
+    color: rgb(255, 181, 46);
+}
+
+.blue {
+    color: rgb(77, 133, 236);
 }
