@@ -10,35 +10,7 @@
     $cody = $('.cody');
     $nav.css('left', CENTER_X - $cody.width() / 2);
     $nav.css('top', CENTER_Y - $cody.height() / 2);
-    $nav.css('opacity', 1);
-    setTimeout(function() {
-      return $cody.css('opacity', 1);
-    }, 2000);
-    setTimeout(function() {
-      $nav.css('left', 50);
-      return $nav.css('top', 50);
-    }, 4000);
-    setTimeout(function() {
-      $nav.css('position', 'relative');
-      $nav.css('display', 'inline-block');
-      $nav.css('padding-left', '50px');
-      $nav.css('padding-top', '50px');
-      $nav.css('left', 'auto');
-      return $nav.css('top', 'auto');
-    }, 4500);
-    return setTimeout(function() {
-      var between, wait;
-      wait = 0;
-      between = 250;
-      return $('.link').each(function() {
-        var link;
-        link = $(this);
-        setTimeout(function() {
-          return link.css('opacity', 1);
-        }, wait);
-        return wait += between;
-      });
-    }, 4500);
+    return $nav.css('opacity', 1);
   });
 
   $(document).ready(function() {
