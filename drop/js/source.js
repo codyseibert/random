@@ -36,7 +36,8 @@
         if (i > 0) {
           links.push({
             source: id - 1,
-            target: id
+            target: id,
+            stroke: randomColor()
           });
         } else {
           node.fixed = true;
@@ -50,7 +51,6 @@
     }
     svg = d3.select('body').append('svg').attr('width', WIDTH).attr('height', HEIGHT);
     $(window).on('resize', function() {
-      console.log('here');
       svg.attr('width', $(document).width());
       return svg.attr('height', $(document).height());
     });
@@ -125,7 +125,7 @@
       }).attr('r', function(d) {
         return 5;
       }).style('fill', function(d) {
-        return d.fill;
+        return randomColor();
       });
       return link.attr('x1', function(d) {
         return nodes[d.source].x;
@@ -136,7 +136,7 @@
       }).attr('y2', function(d) {
         return nodes[d.target].y;
       }).style('stroke', function(d) {
-        return randomColor();
+        return d.stroke;
       });
     };
     setInterval(function() {

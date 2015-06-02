@@ -36,6 +36,7 @@ $(document).ready ->
           links.push
             source: id - 1
             target: id
+            stroke: randomColor()
         else
           node.fixed = true
 
@@ -53,7 +54,6 @@ $(document).ready ->
     .attr('height', HEIGHT)
 
   $(window).on 'resize', ->
-    console.log 'here'
     svg.attr 'width', $(document).width()
     svg.attr 'height', $(document).height()
 
@@ -124,14 +124,14 @@ $(document).ready ->
       .attr('cx', (d) -> d.x)
       .attr('cy', (d) -> d.y)
       .attr('r', (d) -> 5)
-      .style('fill', (d) -> d.fill)
+      .style('fill', (d) -> randomColor())
 
     link
       .attr('x1', (d) -> nodes[d.source].x)
       .attr('y1', (d) -> nodes[d.source].y)
       .attr('x2', (d) -> nodes[d.target].x)
       .attr('y2', (d) -> nodes[d.target].y)
-      .style('stroke', (d) -> randomColor())
+      .style('stroke', (d) -> d.stroke)
 
   setInterval ->
     update()
