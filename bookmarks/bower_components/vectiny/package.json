@@ -1,0 +1,21 @@
+{
+  "name": "vectiny",
+  "version": "0.0.2",
+  "description": "very tiny 2D vectors",
+  "main": "vectiny.js",
+  "scripts": {
+    "test": "tap test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/phuu/Vectiny.git"
+  },
+  "author": "Tom Ashworth <tom@phuu.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/phuu/Vectiny/issues"
+  },
+  "devDependencies": {
+    "tap": "~0.4.4"
+  }
+}

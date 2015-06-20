@@ -1,0 +1,25 @@
+body {
+  background-color: black;
+  overflow: hidden;
+  padding: 0px;
+  margin: 0px;
+}
+
+.node{
+  fill: white;
+}
+
+.link{
+  stroke-width: 5px;
+  stroke: yellow;
+}
+
+.plus{
+  fill: red;
+}
+
+.rectangle {
+  stroke-width: 5px;
+  stroke: orange;
+  fill: red;
+}

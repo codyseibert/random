@@ -1,0 +1,15 @@
+{
+  "name": "vectiny",
+  "homepage": "https://github.com/phuu/vectiny",
+  "version": "0.0.2",
+  "_release": "0.0.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.2",
+    "commit": "f47df05a9f384f4781a7001079b95e142e985e17"
+  },
+  "_source": "git://github.com/phuu/vectiny.git",
+  "_target": "v0.0.2",
+  "_originalSource": "vectiny",
+  "_direct": true
+}
