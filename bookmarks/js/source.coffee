@@ -1,26 +1,45 @@
 $(document).ready ->
 
-  class Node
+  nodes = []
+  links = []
+  sx = null
+  sy = null
+  cx = 0
+  cy = 0
 
+  class Node
     @ids = 0
 
-    constructor: () ->
+    constructor: ->
       @id = Node.ids++
       @x = 0
       @y = 0
       @parent = null
       @text = ''
       @children = []
+      nodes.push @
 
     setParent: (parent) ->
       if @parent
         @parent.remove @
       @parent = parent
+      parent.children.push @
+      @x = parent.x - Math.random() * 20 + 10
+      @y = parent.y - Math.random() * 20 + 10
+      links.push new Link parent, @
       @
 
     remove: (child) ->
       @children.splice @children.indexOf child, 1
       child
+
+  class Link
+    @ids = 0
+
+    constructor: (source, target) ->
+      @id = Link.ids++
+      @source = source
+      @target = target
 
   randomColor = ->
     '#'+Math.floor(Math.random()*16777215).toString(16);
@@ -39,35 +58,63 @@ $(document).ready ->
     svg.attr 'width', w
     svg.attr 'height', h
 
+  $(window).on 'mousedown', (e) ->
+    sx = e.clientX
+    sy = e.clientY
+
+  $(window).on 'mouseup', (e) ->
+    sx = null
+    sy = null
+
+  $(window).on 'mousemove', (e) ->
+    if sx? and sy?
+      dx = e.clientX - sx
+      dy = e.clientY - sy
+      sx = e.clientX
+      sy = e.clientY
+      cx += dx
+      cy += dy
+
   head = new Node()
-  nodes = [head]
-
-  child = new Node()
-  child.setParent head
-  nodes.push child
-
   head.x = w / 2
   head.y = h / 2
 
-  child.x = head.x - 1
-  child.y = head.y - 1
+  link = null
+  node = null
 
   circles = null
   rects = null
   texts = null
 
-  # link = svg.selectAll('.link')
-  #   .data(links)
-  #   .enter().append('line')
+  new Node().setParent head
+  new Node().setParent head
+  new Node().setParent head
+  new Node().setParent head
+  new Node().setParent head
+  new Node().setParent head
+  new Node().setParent head
 
-  node = svg.selectAll('.node')
-    .data(nodes)
-    .enter().append('circle').classed('node', true)
+  refresh = ->
+    svg.selectAll('.link')
+      .data(links, (d) -> d.id)
+      .enter()
+        .insert('line', ':first-child')
+        .classed('link', true)
 
-  console.log node
+    svg.selectAll('.node')
+      .data(nodes, (d) -> d.id)
+      .enter()
+        .append('circle')
+        .classed('node', true)
+        .on('dblclick', (nodeClicked) ->
+          new Node().setParent nodeClicked
+          refresh()
+        )
+  refresh()
 
   update = ->
-    MAX = 100
+    MAX = 200
+    PUSH = 5
 
     for n1, i in nodes
       sum = V 0, 0
@@ -75,39 +122,30 @@ $(document).ready ->
       for n2, j in nodes
         continue if n1 == n2
         outer = V n2.x, n2.y
-        sum = sum.add inner.sub outer
-
-      if sum.x isnt 0 or sum.y isnt 0
-        mag = sum.mag()
+        dif = inner.sub outer
+        mag = dif.mag()
         norm = 1.0 - Math.min(mag, MAX) / MAX
-        dir = sum.unit()
-        inner = inner.add dir.mult norm * 5
-        n1.x = inner.x
-        n1.y = inner.y
-
-      # .on('dblclick', (nodeClicked) ->
-      #   newNode = new Node
-      #   newNode.setParent nodeClicked
-      #   nodes.push newNode
-      #   update()
-      # )
+        dir = dif.unit()
+        sum = sum.add dir.mult norm * PUSH
+      inner = inner.add sum
+      n1.x = inner.x
+      n1.y = inner.y
 
   render = ->
-    # links
-    #   .attr('x1', (d) -> d.source.x)
-    #   .attr('y1', (d) -> d.source.y)
-    #   .attr('x2', (d) -> d.target.x)
-    #   .attr('y2', (d) -> d.target.y)
+    svg.selectAll('.link')
+      .attr('x1', (d) -> d.source.x + cx)
+      .attr('y1', (d) -> d.source.y + cy)
+      .attr('x2', (d) -> d.target.x + cx)
+      .attr('y2', (d) -> d.target.y + cy)
 
-    node
-      .attr('cx', (d) -> d.x)
-      .attr('cy', (d) -> d.y)
+    svg.selectAll('.node')
+      .attr('cx', (d) -> d.x + cx)
+      .attr('cy', (d) -> d.y + cy)
       .attr('r', 40)
-
 
   setInterval ->
     update()
-  , 1
+  , 10
 
   window.requestAnimationFrame = do ->
     window.requestAnimationFrame ||
@@ -122,7 +160,6 @@ $(document).ready ->
     render()
     requestAnimationFrame recursiveAnim
   )()
-
 
 
 # rects = nodes
