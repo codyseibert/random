@@ -1,41 +1,62 @@
 $(document).ready ->
 
+  nodes = JSON.parse localStorage.getItem 'nodes' or '[]'
+  links = JSON.parse localStorage.getItem 'links' or '[]'
   nodes = []
   links = []
+
   sx = null
   sy = null
   cx = 0
   cy = 0
 
+  MAX = 200
+  PUSH = 5
+
+  getRandomNumber = (a) ->
+    r = Math.random() * a
+    if r < 10 and r > 0
+      r += 20
+    if r > -10 and r < 0
+      r -= 20
+    r
+
   class Node
-    @ids = 0
+    @ids = nodes.length
 
     constructor: ->
       @id = Node.ids++
       @x = 0
       @y = 0
       @parent = null
-      @text = ''
       @children = []
+      @link = null
+      @text = 'asdfasdf'
       nodes.push @
 
     setParent: (parent) ->
-      if @parent
-        @parent.remove @
-      @parent = parent
-      parent.children.push @
-      @x = parent.x - Math.random() * 20 + 10
-      @y = parent.y - Math.random() * 20 + 10
-      links.push new Link parent, @
+      @parent = parent.id
+      sum = V 0, 0
+      inner = V parent.x, parent.y
+      for id, j in parent.children
+        n2 = nodes[id]
+        outer = V n2.x, n2.y
+        sum = sum.add inner.sub outer
+      dir = sum.unit()
+      if (not isNaN dir.x) and (not isNaN dir.y) and parent.children.length > 2
+        dir = dir.mult 50
+        @x = dir.x + parent.x
+        @y = dir.y + parent.y
+      else
+        @x = parent.x + getRandomNumber 50
+        @y = parent.y + getRandomNumber 50
+
+      parent.children.push @id
+      links.push new Link parent.id, @id
       @
 
-    remove: (child) ->
-      @children.splice @children.indexOf child, 1
-      child
-
   class Link
-    @ids = 0
-
+    @ids = links.length
     constructor: (source, target) ->
       @id = Link.ids++
       @source = source
@@ -75,24 +96,14 @@ $(document).ready ->
       cx += dx
       cy += dy
 
-  head = new Node()
-  head.x = w / 2
-  head.y = h / 2
-
-  link = null
-  node = null
+  if nodes.length is 0
+    head = new Node()
+    head.x = w / 2
+    head.y = h / 2
 
   circles = null
   rects = null
   texts = null
-
-  new Node().setParent head
-  new Node().setParent head
-  new Node().setParent head
-  new Node().setParent head
-  new Node().setParent head
-  new Node().setParent head
-  new Node().setParent head
 
   refresh = ->
     svg.selectAll('.link')
@@ -101,22 +112,25 @@ $(document).ready ->
         .insert('line', ':first-child')
         .classed('link', true)
 
-    svg.selectAll('.node')
+    node = svg.selectAll('.node')
       .data(nodes, (d) -> d.id)
       .enter()
-        .append('circle')
-        .classed('node', true)
-        .on('dblclick', (nodeClicked) ->
-          new Node().setParent nodeClicked
-          refresh()
-        )
+      .append('g')
+      .classed('node', true)
+      .on('dblclick', (nodeClicked) ->
+        new Node().setParent nodeClicked
+        refresh()
+      )
+    node.append('circle')
+    node.append('text')
+
+    localStorage.setItem 'nodes', JSON.stringify nodes
+    localStorage.setItem 'links', JSON.stringify links
   refresh()
 
   update = ->
-    MAX = 200
-    PUSH = 5
-
     for n1, i in nodes
+      continue if n1.locked
       sum = V 0, 0
       inner = V n1.x, n1.y
       for n2, j in nodes
@@ -126,22 +140,46 @@ $(document).ready ->
         mag = dif.mag()
         norm = 1.0 - Math.min(mag, MAX) / MAX
         dir = dif.unit()
-        sum = sum.add dir.mult norm * PUSH
+        if (not isNaN dir.x) and (not isNaN dir.y)
+          sum = sum.add dir.mult norm * PUSH
       inner = inner.add sum
       n1.x = inner.x
       n1.y = inner.y
 
+    # for n1, i in nodes
+    #   inner = V n1.x, n1.y
+    #   if n1.parent isnt null
+    #     parent = nodes[n1.parent]
+    #     outer = V parent.x, parent.y
+    #     dif = outer.sub inner
+    #     mag = dif.mag()
+    #     if mag > MAX
+    #       n1.locked = true
+    #       setTimeout ->
+    #         n1.locked = false
+    #       , 1000
+
   render = ->
     svg.selectAll('.link')
-      .attr('x1', (d) -> d.source.x + cx)
-      .attr('y1', (d) -> d.source.y + cy)
-      .attr('x2', (d) -> d.target.x + cx)
-      .attr('y2', (d) -> d.target.y + cy)
+      .attr('x1', (d) -> nodes[d.source].x + cx)
+      .attr('y1', (d) -> nodes[d.source].y + cy)
+      .attr('x2', (d) -> nodes[d.target].x + cx)
+      .attr('y2', (d) -> nodes[d.target].y + cy)
 
     svg.selectAll('.node')
-      .attr('cx', (d) -> d.x + cx)
-      .attr('cy', (d) -> d.y + cy)
-      .attr('r', 40)
+      .attr('transform', (d) -> "translate(#{d.x + cx},#{d.y + cy})")
+
+    svg.selectAll('.node circle')
+      .attr('cx', 0)
+      .attr('cy', 0)
+      .attr('r', 30)
+
+    svg.selectAll('.node text')
+      .text((d) -> d.text)
+      .attr('x', 0)
+      .attr('y', 0)
+      .attr('fill', 'red')
+      .attr('font-size', '20px')
 
   setInterval ->
     update()
