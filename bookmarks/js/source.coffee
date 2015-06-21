@@ -2,12 +2,12 @@ $(document).ready ->
 
   nodes = JSON.parse localStorage.getItem 'nodes' or '[]'
   links = JSON.parse localStorage.getItem 'links' or '[]'
-  nodes = []
-  links = []
+  # nodes = []
+  # links = []
 
   sx = null
   sy = null
-  lastClicked = null
+  selected = null
   cx = 0
   cy = 0
 
@@ -31,8 +31,8 @@ $(document).ready ->
       @y = 0
       @parent = null
       @children = []
-      @link = 'testing'
-      @text = 'asdfasdf'
+      @notes = ''
+      @title = ''
       @on = false
       nodes.push @
 
@@ -98,6 +98,24 @@ $(document).ready ->
       cx += dx
       cy += dy
 
+  saving = null
+  save = ->
+    if not saving
+      setTimeout ->
+        localStorage.setItem 'nodes', JSON.stringify nodes
+        saving = false
+      , 1000
+
+  $('#title').on 'input propertychange', ->
+    if selected
+      selected.title = $(this).val()
+      save()
+
+  $('#notes').on 'input propertychange', ->
+    if selected
+      selected.notes = $(this).val()
+      save()
+
   if nodes.length is 0
     head = new Node()
     head.x = w / 2
@@ -123,10 +141,24 @@ $(document).ready ->
         new Node().setParent node
         refresh()
       )
+
+    node.append('circle')
+      .on('mouseover', (d) ->
+        d.over = true
+      )
+      .on('mouseout', (d) ->
+        d.over = false
+      )
       .on('click', (node) ->
+        if selected
+          selected.selected = false
+        node.selected = true
+        selected = node
+        $('#notes').val selected.notes
+        $('#title').val selected.title
         $('#panel a').html node.link
       )
-    node.append('circle')
+
     node.append('text')
 
     localStorage.setItem 'nodes', JSON.stringify nodes
@@ -178,9 +210,22 @@ $(document).ready ->
       .attr('cx', 0)
       .attr('cy', 0)
       .attr('r', 30)
+      .attr('fill', (d) ->
+        if d.over
+          'gray'
+        else
+          'white'
+      )
+      .attr('stroke', 'orange')
+      .attr('stroke-width', (d) ->
+        if d.selected
+          '6px'
+        else
+          '0px'
+      )
 
     svg.selectAll('.node text')
-      .text((d) -> d.text)
+      .text((d) -> d.title)
       .attr('x', 0)
       .attr('y', 0)
       .attr('fill', 'red')
