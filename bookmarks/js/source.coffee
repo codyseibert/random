@@ -7,6 +7,7 @@ $(document).ready ->
 
   sx = null
   sy = null
+  lastClicked = null
   cx = 0
   cy = 0
 
@@ -30,8 +31,9 @@ $(document).ready ->
       @y = 0
       @parent = null
       @children = []
-      @link = null
+      @link = 'testing'
       @text = 'asdfasdf'
+      @on = false
       nodes.push @
 
     setParent: (parent) ->
@@ -117,9 +119,12 @@ $(document).ready ->
       .enter()
       .append('g')
       .classed('node', true)
-      .on('dblclick', (nodeClicked) ->
-        new Node().setParent nodeClicked
+      .on('dblclick', (node) ->
+        new Node().setParent node
         refresh()
+      )
+      .on('click', (node) ->
+        $('#panel a').html node.link
       )
     node.append('circle')
     node.append('text')
