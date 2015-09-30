@@ -1,0 +1,62 @@
+PAOTrainer.SUIT_VALUE_MAPPING = {
+    "spades": {
+        "2": "reg drinking coffee",
+        "3": "jamie buying purses",
+        "4": "nadine brewing tea",
+        "5": "caitlyn flying spaceships",
+        "6": "rob punching babies",
+        "7": "zoilo stealing money",
+        "8": "will fixing bikes",
+        "9": "tyler breathing fire",
+        "10": "doug reading books",
+        "J": "davis hunting deer",
+        "Q": "megan throwing spears",
+        "K": "ryan crashing cars",
+        "A": "mark popping pills"
+    },
+    "clubs": {
+        "2": "jordan spitting acid",
+        "3": "steven grilling burgers",
+        "4": "blake snapping photos",
+        "5": "phil baking cakes",
+        "6": "palumbo massaging shoulders",
+        "7": "lacey smoking trees",
+        "8": "brandon dropping beer",
+        "9": "hope brushing teeth",
+        "10": "michael wrestling aligators",
+        "J": "jess flexing muscles",
+        "Q": "jessy bagging groceries",
+        "K": "bunker jiggling computers",
+        "A": "rachael singing songs"
+    },
+    "hearts": {
+        "2": "sean selling oranges",
+        "3": "brian strumming guitars",
+        "4": "david swinging swords",
+        "5": "aj crying blood",
+        "6": "neel probing eardrums",
+        "7": "richard scooping icecream",
+        "8": "cody climbing walls",
+        "9": "hannah flipping pancakes",
+        "10": "payden shooting guns",
+        "J": "jean running marathons",
+        "Q": "lisa riding horses",
+        "K": "carl clapping hands",
+        "A": "kayla lifting weights"
+    },
+    "diamonds": {
+        "2": "austin catching fish",
+        "3": "guillermo surfing websites",
+        "4": "wally stroking mustaches",
+        "5": "eckert holding snakes",
+        "6": "maynard juggling chainsaws",
+        "7": "mayer eating microphones",
+        "8": "julio printing shirts",
+        "9": "danny solving rubix",
+        "10": "hickson building robots",
+        "J": "beau stabbing peanutbutter",
+        "Q": "francies teaching piano",
+        "K": "tommy tapping shoes",
+        "A": "mercer pouring resin"
+    }
+};

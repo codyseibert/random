@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2014 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="road" unicode="&#xe800;" d="m28 34q0 30 14 64l233 583q5 11 15 18t21 8h189q-7 0-13-5t-6-13l-8-107q-1-8 4-13t12-5h93q7 0 12 5t5 13l-9 107q0 7-6 13t-13 5h190q11 0 21-8t14-18l233-583q15-34 15-64 0-41-26-41h-393q7 0 12 5t5 13l-11 143q-1 7-7 12t-12 5h-152q-7 0-13-5t-6-12l-11-143q-1-8 4-13t12-5h-392q-26 0-26 41z m423 260q0-6 5-11t12-4h136q7 0 12 4t4 11v2l-13 179q-1 7-7 13t-12 5h-104q-7 0-13-5t-6-13l-14-179v-2z" horiz-adv-x="1071.4" />
+</font>
+</defs>
+</svg>

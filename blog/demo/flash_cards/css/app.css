@@ -1,0 +1,35 @@
+body{
+    text-align: center;
+}
+
+.card{ 
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    cursor: pointer;
+} 
+
+.overlay{
+    background-color: rgba(0, 0, 0, 0.0);
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    z-index: 1;
+    position: absolute;
+}
+
+.card:hover .overlay{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.text{ 
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center; 
+    top: 40%;
+    position: relative;
+}

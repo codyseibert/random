@@ -1,0 +1,63 @@
+<head>
+<style>
+body{
+font-family: "lucida sans regular";
+margin: 0;
+padding: 0;
+}
+#flag {
+  width: 398px;
+  border: 1px solid #ddd;
+  margin: 0 auto;
+  position: relative;
+}
+.blue {
+  width: auto !important;
+  width: 180px;
+  background-color: #00348c;
+  color: #fff;
+  text-align: center;
+  padding: 2px 0 5px 8px !important;
+  padding: 2px 0 5px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.blue p {
+  letter-spacing: 12px;
+  height: 14px;
+  font-size: 20px;
+  line-height: 14px;
+  margin: 0;
+}
+p.stripe {
+  height: 19px;
+  font-weight: bold;
+  text-align: right;
+  padding: 0 5px;
+  margin: 0;
+}
+.red {
+  color: #f70029;
+  background-color: #f70029;
+}
+.red::moz-selection {
+  color: #fff;
+  background-color: F70029;
+}
+.red::selection {
+  color: #fff;
+  background-color: #f70029;
+}
+.white {
+  color: #fff;
+  background-color: #fff;
+}
+.white::moz-selection{
+  color: #000;
+  background-color: #fff;
+}
+>white::selection {
+  color: #000;
+  background-color: #fff;
+}

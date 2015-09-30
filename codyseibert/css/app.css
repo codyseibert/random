@@ -1,0 +1,256 @@
+body{
+    text-align: center;
+    overflow: hidden;
+}
+
+.page_title{
+    font-size: 40px;
+    font-weight: bold;
+    color: #2ba6cb;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.card{ 
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    cursor: pointer;
+} 
+
+.overlay{
+    background-color: rgba(0, 0, 0, 0.0);
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    z-index: 1;
+    position: absolute;
+}
+
+.card:hover .overlay{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.text{ 
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center; 
+    top: 40%;
+    position: relative;
+} 
+
+i{
+    font-size: 30px;
+}
+
+.cody{
+    margin-bottom: 10px;
+}
+
+.icons{
+    margin-bottom: 10px;
+}
+
+body{
+    background: url("../images/squared_metal.png");
+    background-repeat: repeat;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    text-align: center;
+    overflow: hidden;
+}
+.github{
+    width: 50px;
+}
+
+.goodies{
+    max-width: 600px;
+    text-align: left;
+}
+
+.center{
+    text-align: center;
+}
+
+#content{
+    margin-bottom: 100px;
+    padding: 20px;
+}   
+
+#header{ 
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px dashed #999;
+    background-color: white;
+}
+
+#name{
+    font-size: 30px; 
+    padding-top: 12px; 
+}
+
+.nav{
+    -webkit-transform: rotate(30deg); 
+    display: inline-block;
+    position: absolute;
+    text-align: center;
+    width: 160px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #666;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.nav:hover{
+    box-shadow: 5px 5px 5px #6ec5b8;
+}
+
+#nav_wrapper{
+    width: 430px;
+    display: inline-block;
+    position: relative;
+    top: -10px;
+}
+
+#news{
+    left: 0px;
+}
+
+#programming{
+    left: 70px;
+}
+
+#art{
+    left: 140px;
+}
+
+#music{
+    left: 210px;
+}
+
+#about{
+    left: 280px;
+} 
+
+iframe{
+    width: 100%;
+    max-width: 600px;
+}
+
+.post{   
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    font-family: 'Open Sans', sans-serif;  
+    padding-bottom: 60px;
+    border-bottom: 2px dotted #999;
+
+}
+
+.post .title{
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 1px 1px #999;
+    color: #2ba6cb;
+}
+
+.post .body{
+    text-align: left;
+}
+
+#construction{
+    background-color: orange;
+    background: url("../images/construction.jpg");
+    background-repeat: repeat;
+    position: absolute;
+    left: -60px;
+    top: 50px;
+    width: 300px;
+    color: white;
+    border: 5px solid white;
+    padding: 10px;
+    z-index: 20;
+    -webkit-transform: rotate(-45deg); 
+}
+
+#about_div{   
+    max-width: 600px;   
+    font-family: 'Open Sans', sans-serif; 
+    text-align: left;
+}
+
+.project{
+    width: 280px;    
+    height: 280px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.project .triangle{
+    width: 180px;
+    height: 180px;
+    background-color: rgba(122,201,237,0.4);
+    -webkit-transform: rotate(45deg); 
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #999;
+}
+
+.project .c{
+    width: 180px;
+    height: 180px;
+    position: relative;
+    top: -180px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    border: 1px solid #999;
+}
+
+.project .c img{
+    max-height: 130px;
+}
+
+.project .c:hover{
+    border: 3px solid #999;
+}
+
+.back{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.back_wrapper{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.small{
+    max-width: 300px;
+}
+
+.title{
+    font-size: 50px;
+}
+
+ul{
+    margin-left: 100px;
+}
+
+.date{
+    color: #6ec5b8;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px #999;
+}
+
+textarea{
+    height: 100px;
+    width: 100%;
+}

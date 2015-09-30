@@ -1,0 +1,42 @@
+body{
+  padding: 0px;
+  margin: 0px;
+  background-color: #EEE;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin: 10px;
+  background-color: gray;
+  cursor: pointer;
+}
+
+.avatar[data-character="yoshi"] {
+  background-image: url("../images/yoshi.png");
+}
+
+.avatar[data-character="megaman"] {
+  background-image: url("../images/megaman.gif");
+}
+
+.avatar[data-character="samus"] {
+  background-image: url("../images/samus.png");
+}
+
+.avatar[data-character="tails"] {
+  background-image: url("../images/tails.gif");
+}
+
+.avatar[data-character="toad"] {
+  background-image: url("../images/toad.jpg");
+}
+
+.avatar[data-character="sonic"] {
+  background-image: url("../images/sonic.jpg");
+}
+
+.description {
+  text-align: center;
+}

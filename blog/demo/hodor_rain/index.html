@@ -1,0 +1,149 @@
+<style>
+    html, body{
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+    } 
+</style>
+
+<html>
+    <body>
+        <canvas id="canvas" width="1" height="1"></canvas>
+    </body>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){ 
+            // HODOR, HODOR, HOOOODOOR!
+            var chars = ["H", "O", "D", "O", "R"];
+
+            var canvas = $("#canvas")[0];
+            var ctx = canvas.getContext("2d"); 
+
+            var SPACING = 20; 
+            var DROPLET_LIVE_TIME = 20;
+            var UPDATE_TIME = 40;
+            var DROPS_PER_ITER = 5;
+            var TRAIL_LENGTH_MAX = 30;
+            var TRAIL_LENGTH_MIN = 10;
+            var MAX_START_I = 5;
+            var maxJ = 0;
+            var maxI = 0; 
+            var droplets = [];
+            var residuals = [];
+
+            // Make the canvas full screen
+            $(window).resize(function(){ 
+                ctx.canvas.width  = window.innerWidth;
+                ctx.canvas.height = window.innerHeight;
+                maxJ = window.innerWidth / SPACING;
+                maxI = window.innerHeight / SPACING; 
+            });
+            $(window).resize();
+      
+            function componentToHex(c) {
+                var hex = c.toString(16);
+                return hex.length == 1 ? "0" + hex : hex;
+            }
+
+            function rgbToHex(r, g, b) {
+                return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+            } 
+
+            var Letter = function(i, j, charIndex, updatesUntilDeath){
+                this.i = i;
+                this.j = j;
+                this.charIndex = charIndex;
+                this.updatesUntilDeath = updatesUntilDeath;
+
+                this.isDead = function(){
+                    return this.updatesUntilDeath <= 0;
+                }
+            }
+       
+            // Where the hodor rain happens
+            var update = function(){ 
+                // Create multiple head droplets
+                for (var i = 0; i < DROPS_PER_ITER; i++){
+                    var ri = parseInt(Math.random() * maxI) - MAX_START_I;
+                    var rj = parseInt(Math.random() * maxJ);
+                    var charIndex = parseInt(Math.random() * chars.length);
+                    var updatesUntilDeath = 
+                        parseInt(Math.random() * TRAIL_LENGTH_MAX) + TRAIL_LENGTH_MIN; 
+                    var droplet = new Letter(ri, rj, charIndex, updatesUntilDeath); 
+                    droplets.push(droplet);
+                }
+
+                // Drop each droplet
+                for (var i = droplets.length - 1; i >= 0; i--){
+                    var droplet = droplets[i];
+                    droplet.updatesUntilDeath--;
+
+                    if (droplet.isDead()){
+                        droplets.splice(i, 1);
+                    }
+
+                    // Residual is left behind the head rain
+                    var residual = new Letter(droplet.i, droplet.j, droplet.charIndex, DROPLET_LIVE_TIME);
+                    residuals.push(residual);
+
+                    droplet.i++;
+                    droplet.charIndex = (droplet.charIndex + 1) % chars.length; 
+                }
+
+                for (var i = residuals.length - 1; i >= 0; i--){ 
+                    var residual = residuals[i];
+                    residual.updatesUntilDeath--;
+
+                    if (residual.isDead()){
+                        residuals.splice(i, 1);
+                    }
+                }
+            }
+            setInterval(update, UPDATE_TIME);
+
+
+            // Animation logic
+            var mainloop = function() { 
+                render();
+                animFrame( mainloop );
+            };  
+
+            var render = function(){
+                ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+
+                // Render the residuals
+                for (var i = 0; i < residuals.length; i++){ 
+                    var residual = residuals[i];
+
+                    // Scale green between 0-255 based off time remaining
+                    var green = parseInt(255 - (DROPLET_LIVE_TIME - residual.updatesUntilDeath) / DROPLET_LIVE_TIME * 255); 
+
+                    ctx.fillStyle = rgbToHex(0, green, 0);
+                    ctx.fillText(chars[residual.charIndex], 
+                        residual.j * SPACING, residual.i * SPACING);
+                }
+
+                // Render the head droplets
+                for (var i = 0; i < droplets.length; i++){
+                    var droplet = droplets[i];
+                    ctx.fillStyle = "#FFFFFF";
+                    ctx.fillText(chars[droplet.charIndex], 
+                        droplet.j * SPACING, droplet.i * SPACING);
+                }
+            }
+
+            var animFrame = window.requestAnimationFrame ||
+                window.webkitRequestAnimationFrame ||
+                window.mozRequestAnimationFrame    ||
+                window.oRequestAnimationFrame      ||
+                window.msRequestAnimationFrame     ||
+                null ;
+
+            animFrame( mainloop );
+        });          
+    </script>
+</html>
+

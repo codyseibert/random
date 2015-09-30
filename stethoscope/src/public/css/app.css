@@ -1,0 +1,12 @@
+body{
+    background-color: white;
+}
+
+.chart {
+    display: inline-block;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}

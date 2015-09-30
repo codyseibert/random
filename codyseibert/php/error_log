@@ -1,0 +1,2 @@
+[13-Nov-2014 10:01:32 America/Denver] PHP Fatal error:  Cannot use object of type stdClass as array in /home3/codyseib/public_html/blog_new/php/app.php on line 27
+[13-Nov-2014 15:58:04 America/Denver] PHP Parse error:  syntax error, unexpected ':' in /home3/codyseib/public_html/blog_new/php/app.php on line 133

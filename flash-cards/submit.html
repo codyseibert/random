@@ -1,0 +1,31 @@
+<style>
+    body{
+        text-align: center;   
+    }
+</style>
+
+<html> 
+    <body> 
+        URL:
+        <input id="url" type="text" />
+        TEXT:
+        <input id="text" type="text" />
+        <input id="submit" type="button" value="Submit"/>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                $("#submit").click(function(){
+                    var url = $("#url").val();
+                    var text = $("#text").val();
+
+                    $.post("php/app.php/cards", {url: url, text: text}, function(data){ 
+                        $("#url").val("");
+                        $("#text").val("");
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

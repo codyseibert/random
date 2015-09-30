@@ -1,0 +1,35 @@
+<!doctype html>
+ 
+<link rel="stylesheet" type="text/css" href="css/foundation.min.css">
+<link rel="stylesheet" type="text/css" href="css/app.css">
+
+<html lang="en" data-framework="angularjs">
+	<head>
+		<meta charset="utf-8">
+		<title>AngularJS • TodoMVC</title>
+		<style>[ng-cloak] { display: none; }</style>
+	</head>
+	<body ng-app="cards">
+		<ng-view />
+
+		<script type="text/ng-template" id="create-card-page.html">
+            <input id="url" type="text" />
+            <input id="text" type="text" />
+            <input id="submit" type="button" />
+		</script>
+
+		<script type="text/ng-template" id="card-list-page.html"> 
+            <div class="card" ng-repeat="card in cards" ng-click="flip(card)">
+                <div class="overlay"></div>
+                <div class="image" ng-show="card.front"><img ng-src="images/{{card.id}}.jpg"></div>
+                <div class="text" ng-show="!card.front">{{card.text}}</div>
+            </div>
+		</script>
+
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="bower_components/angular-route/angular-route.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/controllers/cardsController.js"></script> 
+		<script src="js/services/cardsService.js"></script> 
+	</body>
+</html>

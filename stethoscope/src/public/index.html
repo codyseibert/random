@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html lang="en" data-framework="angularjs">
+    <head>
+        <meta charset="utf-8" />
+        <title>stethoscope</title>
+        <link rel="stylesheet" href="css/app.css" />
+        <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css">
+        <style>[ng-cloak] { display: none; }</style>
+    </head>
+
+    <body ng-app="stethoscope">
+
+        <ng-view autoscroll="true" />
+
+        <!-- bower:js -->
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/moment/moment.js"></script>
+        <script src="bower_components/Chart.js/Chart.min.js"></script>
+        <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
+        <script src="bower_components/angular-foundation/mm-foundation-tpls.js"></script>
+        <!-- endbower -->
+
+        <script src="js/app.js"></script>
+
+        <!-- build:remove -->
+            <!-- Controllers -->
+            <script src="js/controllers/ServersController.js"></script>
+            <script src="js/controllers/ServerController.js"></script>
+            <script src="js/controllers/NetController.js"></script>
+            <script src="js/controllers/MemController.js"></script>
+            <script src="js/controllers/CpuController.js"></script>
+            <!-- Directives -->
+
+            <!-- Services -->
+            <script src="js/services/ServersService.js"></script>
+            <script src="js/services/CpusService.js"></script>
+            <script src="js/services/MemsService.js"></script>
+            <script src="js/services/NetsService.js"></script>
+            <script src="js/services/SortService.js"></script>
+        <!-- /build -->
+    </body>
+</html>

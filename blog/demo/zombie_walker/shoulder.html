@@ -1,0 +1,786 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Sample Three.js</title>
+		<style>
+			#container {
+				background: #000;
+				width: 800px;
+				height: 600px;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div align=center>
+			<div id="container">
+			</div>
+			<span id="fps"></span>
+		</div>
+
+	</body>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="gl-matrix.js"></script>
+	<script src="three.min.js"></script>
+
+	<script type="text/javascript">
+	
+		var scene = new THREE.Scene();
+		scene.fog = new THREE.FogExp2(0xD6F1FF, 0.0005);
+ 
+		var objects = [];
+		
+		var playerRotation = 0;
+		var viewDir = new THREE.Vector3(0, 0, 0);
+		
+		
+		OBB = function(width, height, depth, orientation, center){
+			this.width = width;
+			this.height = height;
+			this.depth = depth;
+			this.orientation = orientation;
+			this.center = center;
+			this.az = new THREE.Vector3(Math.sin(orientation), 0, Math.cos(orientation)).normalize();
+			this.ax = new THREE.Vector3(Math.sin(orientation + Math.PI/2), 0, Math.cos(orientation + Math.PI/2)).normalize();
+			this.azv = this.az.clone().multiplyScalar(width/2);
+			this.axv = this.ax.clone().multiplyScalar(depth/2);
+		}
+		
+		OBB.prototype = {
+			constructor: OBB,
+			
+			intersect: function(obb){				
+				var axes = [obb.ax, obb.az, this.ax, this.az];
+				var T = obb.center.clone().subSelf(this.center);
+				for (var i in axes){
+					var L = axes[i];
+					if (Math.abs(T.dot(L)) > Math.abs(this.axv.dot(L)) + Math.abs(this.azv.dot(L)) + Math.abs(obb.axv.dot(L)) + Math.abs(obb.azv.dot(L)))
+						return false;
+				}
+				return true;
+			},
+			
+			createMesh: function(){
+				var mesh = new THREE.Mesh( new THREE.CubeGeometry( this.depth, this.height, this.width ), new THREE.MeshNormalMaterial() );
+				mesh.geometry.applyMatrix(new THREE.Matrix4().makeRotationY(this.orientation));
+				mesh.position = this.center;
+				scene.add(mesh);
+				return mesh;
+			}
+		}
+	
+		var modelLoader = new THREE.JSONLoader();							
+		var modelGeometries = {};
+		var modelFiles = [
+							"bench",
+							"bodybag",
+							"concrete_barrier",
+							"corpse",
+							"house",
+							"stopsign",
+							"ted",
+							"trashbag",
+							"man"
+						];		
+		
+		//load all the model geometries from the .js files
+		var modelsToLoad = modelFiles.length;
+		function makeHandler(name) {
+			return function ( geometry ) {
+				modelsToLoad--;
+				
+				//save the mesh into modelMeshes
+				modelGeometries[name] = geometry;
+				
+				//center the geometry
+				geometry.computeBoundingBox();
+				var center = geometry.boundingBox.max.clone().addSelf(geometry.boundingBox.min).multiplyScalar(0.5);
+				geometry.applyMatrix(new THREE.Matrix4().makeTranslation(-center.x, -geometry.boundingBox.min.y, -center.z));
+				geometry.computeBoundingBox();
+				
+				if (modelsToLoad == 0){
+					init();
+				}
+			};
+		}
+		for (var i in modelFiles){
+			modelLoader.load( modelFiles[i]+".js", makeHandler(modelFiles[i]));
+		}
+		
+		function createModel(name){			
+			var mesh = new THREE.Mesh( modelGeometries[name], new THREE.MeshFaceMaterial() );
+			scene.add(mesh);
+			
+			var obb = new OBB(mesh.geometry.boundingBox.max.z*2, mesh.geometry.boundingBox.max.y*2, mesh.geometry.boundingBox.max.x*2, 0, mesh.position);
+			//obb.createMesh();
+			objects.push(obb);
+			
+			return mesh;
+		}
+		
+		function init(){		
+			
+			for (var i = 0; i < 20; i++){	
+				model = createModel("concrete_barrier");
+				if (i % 5 != 0)
+				model.position.set(i*100, 0, 0);
+			}						
+			
+			box = createModel("ted");
+			
+			
+			loadMap(map);
+		}
+			
+		
+		var map = 
+		{
+			width: 21,
+			height: 21,
+			data: 
+			[
+			["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "r", "0", "0", "0", "0", "r", "0", "0", "0", "0", "0"],
+			["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "r", "0", "0", "0", "0", "r", "0", "0", "0", "0", "0"],
+			["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "r", "0", "0", "0", "0", "r", "0", "0", "0", "0", "0"],
+			["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "r", "0", "0", "0", "0", "r", "0", "0", "0", "0", "0"],
+			["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "r", "0", "0", "0", "0", "r", "0", "0", "0", "0", "0"],
+			["r", "r", "r", "r", "r", "r", "r", "r", "r", "r", "r", "r", "r", "r", "r", "r", "r", "r", "r", "r", "r"],
+			["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "r", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"],
+			["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "r", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"],
+			["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "r", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"],
+			["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "r", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"],
+			["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "r", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"],
+			["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "r", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"],
+			["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "r", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"],
+			["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "r", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"],
+			["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "r", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"],
+			["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "r", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"],
+			["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "r", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"],
+			["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "r", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"],
+			["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "r", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"],
+			["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "r", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"],
+			["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "r", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"]
+			]
+		}
+		
+		var edges = [];
+		var waypoints = [];
+		
+		function loadMap(map){
+			
+			function print(){
+				for (var i = 0; i < map.data.length; i++){
+					var str = "";
+					for (var j = 0; j < map.data[i].length; j++){
+						str += map.data[i][j];
+					}
+					console.log(str);
+				}
+				console.log(" ");
+			}
+			
+			function replacePattern(pattern, replace){				
+				var height = parseInt(pattern.length/2);
+				var width = parseInt(pattern[0].length/2);
+				for (var i = height; i < map.data.length-height; i++){
+					for (var j = width; j < map.data[i].length-width; j++){
+					
+						var same = true;
+						for (var k = 0; k < pattern.length; k++){
+							for (var l = 0; l < pattern[k].length; l++){
+								if (map.data[i-height+k][j-width+l] != pattern[k][l]){
+									same = false;
+									k = 1000;
+									break;
+								}
+							}
+						}
+						
+						if (same){	
+							var h2 = parseInt(replace.length/2);
+							var w2 = parseInt(replace[0].length/2);
+							for (var k = 0; k < replace.length; k++){
+								for (var l = 0; l < replace[k].length; l++){
+									map.data[i-h2+k][j-w2+l] = replace[k][l];
+								}
+							}
+						}
+					}
+				}
+			}
+			replacePattern([["0", "r", "0"],["r", "r", "r"],["0", "r", "0"]], [["c", "p", "l", "p", "c_3"],["p", "p", "p", "p", "p"],["l_1", "p", "p", "p", "l_1"], ["p", "p", "p", "p", "p"], ["c_1", "p", "l", "p", "c_2"]]);
+			replacePattern([["0", "r", "0"],["r", "r", "r"],["0", "0", "0"]], [["c", "p", "p", "p", "c_3"],["p", "p", "p", "p", "p"],["l_1", "l_1", "l_1", "l_1", "l_1"], ["p", "p", "p", "p", "p"], ["s_1", "s_1", "s_1", "s_1", "s_1"]]);
+			replacePattern([["r"],["r"],["r"]], [["s", "p", "l", "p", "s_2"],["s", "p", "l", "p", "s_2"],["s", "p", "l", "p", "s_2"]]);
+			replacePattern([["r", "r", "r"]], [["s_3", "s_3", "s_3"], ["p", "p", "p"], ["l_1", "l_1", "l_1"], ["p", "p", "p"], ["s_1", "s_1", "s_1"]]);
+				
+			//temp chain link
+			/*
+			var gg = new THREE.PlaneGeometry( 300, 100 );
+			var mat = new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture( 'chain.png')});
+			mat.transparent = true;	
+			mat.doubleSided = true;
+			var ground = new THREE.Mesh( gg, mat );
+			ground.material.map.repeat.set( 1, 1 );
+			ground.material.map.wrapS = ground.material.map.wrapT = THREE.RepeatWrapping;
+			ground.rotation.x = -Math.PI; //set the correct normal facing up
+			//ground.rotation.z = Math.PI + rotate*Math.PI/2;
+			//ground.position.set(x, y, z);
+			ground.position.set(0, 50, 0);
+			ground.geometry.computeBoundingBox();
+			scene.add( ground );
+			*/
+			
+			
+		
+			var rusty = new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture( 'rusted-floor2.jpg')});				
+			var grass = new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture( 'grass.jpg')});					
+			var pavement = new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture( 'pavement.jpg')});				
+			var pavement_yellow_line = new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture( 'pavement_yellow_line.jpg')});
+			var sidewalk_left = new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture( 'sidewalk_left.jpg')});
+			var sidewalk_right = new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture( 'sidewalk_right.jpg')});
+			var sidewalk_corner = new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture( 'sidewalk_corner.jpg')});
+			var sphereM = new THREE.MeshLambertMaterial({color: 0xCC0000});
+			
+			var tileWidth = 100;
+			var tileHeight = 100;
+			
+			for (var i = 0; i < map.height; i++){
+				var row = [];
+				var edgeRow = [];
+				for (var j = 0; j < map.width; j++){
+					var x = (map.width-j)*tileWidth - map.width*tileWidth/2 + tileWidth/2;
+					var z = (map.height-i)*tileHeight - map.height*tileHeight/2 + tileHeight/2;
+					var y = 0;
+					var type = map.data[i][j];
+					var gg = new THREE.PlaneGeometry( tileWidth, tileHeight );
+					//var gm = new THREE.MeshPhongMaterial( { color: 0xffffff, map: rusty, perPixel: true } );
+					var gm = null;
+					
+					//check if rotate character is present
+					var rotate = 0;
+					if (type.indexOf("_") != -1){
+						var split = type.split("_");
+						type = split[0];
+						rotate = parseInt(split[1]);
+					}
+					
+					if (type == "0"){
+						gm = grass;
+					}else if (type == "s"){
+						gm = sidewalk_left;
+					}else if (type == "p"){
+						gm = pavement;
+					}else if (type == "l"){
+						gm = pavement_yellow_line;
+					}else if (type == "c"){
+						gm = sidewalk_corner;
+					}else{
+						gm = grass;
+					}
+					
+					var ground = new THREE.Mesh( gg, gm );
+					ground.material.map.repeat.set( 1, 1 );
+					ground.material.map.wrapS = ground.material.map.wrapT = THREE.RepeatWrapping;
+					ground.rotation.x = -Math.PI/2; //set the correct normal facing up
+					ground.rotation.z = Math.PI + rotate*Math.PI/2;
+					ground.receiveShadow = true;
+					ground.position.set(x, y, z);
+					scene.add( ground );
+					
+					row.push(new THREE.Vector3(x, y, z));
+					edgeRow.push([]);
+				
+					var sphere = new THREE.Mesh(new THREE.SphereGeometry(5,16,16), sphereM);
+					sphere.position.set(x, 0, z);
+					//scene.add(sphere);
+				}
+				waypoints.push(row);
+				edges.push(edgeRow);
+			}
+			
+			for (var i = 0; i < edges.length; i++){
+				for (var j = 0; j < edges[i].length; j++){
+					var current = waypoints[i][j];
+					//if (i < 10 || i > 12 || j < 10 || j > 12) continue;
+					for (var k = -1; k <=1; k++){
+						for (var l = -1; l <= 1; l++){
+							if (i+k < 0 || i+k >= edges.length || l+j < 0 || l+j >= edges[i].length) continue;
+							if (k == 0 && l == 0) continue;
+							
+							var other = waypoints[i+k][j+l];
+							var dir = other.clone().subSelf(current);
+							var angle = Math.acos(dir.clone().normalize().dot(new THREE.Vector3(0, 0, 1)));		
+							if (dir.x < 0) angle = Math.PI - angle;
+							var length = dir.length();
+							var bbox = new OBB(length, 20, 5, angle, current.clone().addSelf(other).multiplyScalar(0.5));
+							var intersecting = false;
+							for (var o in objects){
+								var object = objects[o];
+								if (object.intersect(bbox)){
+									intersecting = true;
+									break;
+								}								
+							}
+							
+							if (!intersecting){		
+								//bbox.createMesh();
+								edges[i][j].push([i+k, j+l]);
+							}
+						}
+					}
+				}
+			}			
+		}
+		
+		
+				
+		function info(v){
+			for (var key in v){
+				console.log(key);
+			}
+		}
+		
+		var debugaxis = function(axisLength){
+			//Shorten the vertex function
+			function v(x,y,z){ 
+					return new THREE.Vertex(new THREE.Vector3(x,y,z)); 
+			}
+			
+			//Create axis (point1, point2, colour)
+			function createAxis(p1, p2, color){
+					var line, lineGeometry = new THREE.Geometry(),
+					lineMat = new THREE.LineBasicMaterial({color: color, lineWidth: 1});
+					lineGeometry.vertices.push(p1, p2);
+					line = new THREE.Line(lineGeometry, lineMat);
+					scene.add(line);
+			}
+			
+			createAxis(v(0, 0, 0), v(axisLength, 0, 0), 0xFF0000);
+			createAxis(v(0, 0, 0), v(-axisLength, 0, 0), 0x990000);
+			createAxis(v(0, 0, 0), v(0, axisLength, 0), 0x00FF00);
+			createAxis(v(0, 0, 0), v(0, -axisLength, 0), 0x009900);
+			createAxis(v(0, 0, 0), v(0, 0, axisLength), 0x0000FF);
+			createAxis(v(0, 0, 0), v(0, 0, -axisLength), 0x000099);
+		};
+		
+		var angle = 0;
+		var light = [200, 100, 200, 1];
+		
+		// set the scene size
+		var WIDTH = 800,
+			HEIGHT = 600;
+
+		// set some camera attributes
+		var VIEW_ANGLE = 45,
+			ASPECT = WIDTH / HEIGHT,
+			NEAR = 0.1,
+			FAR = 10000;
+
+		// get the DOM element to attach to
+		// - assume we've got jQuery to hand
+		var container = $('#container');
+
+		// create a WebGL renderer, camera
+		// and a scene
+		var renderer = new THREE.WebGLRenderer();
+		
+		var camera = new THREE.PerspectiveCamera(  VIEW_ANGLE,
+										ASPECT,
+										NEAR,
+										FAR  );
+		/*
+		camera = new THREE.OrthographicCamera(
+			WIDTH / -2,   // Left
+			WIDTH / 2,    // Right
+			HEIGHT / 2,   // Top
+			HEIGHT / -2,  // Bottom
+			-2000,            // Near clipping plane
+			2000 );           // Far clipping plane
+		*/
+		
+		// the camera starts at 0,0,0 so pull it back
+		var cPos = new THREE.Vector3(-200, 200, -200);
+		camera.position.set(cPos.x, cPos.y, cPos.z);
+		camera.up.set(0, 1, 0);
+		camera.lookAt(new THREE.Vector3(0, 0, 0));
+		
+		
+		// start the renderer
+		renderer.setSize(WIDTH, HEIGHT);
+
+		// attach the render-supplied DOM element
+		container.append(renderer.domElement);
+
+		// create the sphere's material
+		var sphereMaterial = new THREE.MeshLambertMaterial(
+		{
+			color: 0xCC0000
+		});
+
+		// set up the sphere vars
+		var radius = 50, segments = 16, rings = 16;
+
+		// create a new mesh with sphere geometry -
+		// we will cover the sphereMaterial next!
+		var sphere = new THREE.Mesh(
+		   new THREE.SphereGeometry(radius, segments, rings),
+		   sphereMaterial);
+		// add the sphere to the scene
+		//scene.add(sphere);
+		
+		//create the plane
+		/*
+		var planeMaterial = new THREE.MeshBasicMaterial(
+		{
+			color: 0x00CC00
+		});
+		var plane = new THREE.Mesh(
+		   new THREE.PlaneGeometry(1000, 1000),
+		   planeMaterial);
+		plane.position.set(0, 0, 0);
+		plane.rotation.x = 1.57;
+		scene.add(plane);
+		*/
+		
+		
+		var geom = new THREE.Geometry(); 
+		var v1 = new THREE.Vector3(0,500,0);
+		var v2 = new THREE.Vector3(0,0,300);
+		var v3 = new THREE.Vector3(300,0,300);
+		geom.vertices.push(v1);
+		geom.vertices.push(v2);
+		geom.vertices.push(v3);
+		geom.faces.push( new THREE.Face3( 2, 1, 0 ) );
+		geom.computeFaceNormals()
+		geom.computeVertexNormals()
+		var object = new THREE.Mesh( geom, new THREE.MeshPhongMaterial({color: 0xCCCC00}) );
+		//scene.add(object);
+		
+		
+
+		// and the camera
+		scene.add(camera);
+				
+		var sl = new THREE.SpotLight( 0xFFFFFF, 2, 200 );
+		sl.exponent = 10;
+		sl.angle = Math.PI/3;
+		scene.add(sl);
+		
+		var flash = new THREE.PointLight( 0xFFFFFF, 2, 300);
+		scene.add(flash);
+		
+		
+		// draw!
+		renderer.render(scene, camera);
+		
+		var keys = [100];
+		var SPEED = 10.0;
+		
+		//pointLight.position.set(0, 100, 0);
+			
+		var nextBFS = Date.now() + 1000;
+		function update(delta){
+			if (box == null) return;
+			if (modelsToLoad > 0) return;
+						
+			sl.position.set(box.position.x, 40, box.position.z);
+			flash.position.set(box.position.x, 40, box.position.z).addSelf(sl.target.position.clone().subSelf(flash.position).normalize().multiplyScalar(15));	
+						
+			if (keys[65]){
+				playerRotation += .05;
+			}else if (keys[68]){
+				playerRotation -= .05;			
+			}
+			
+			if (keys[87]){
+				box.position.addSelf(viewDir.clone().multiplyScalar(10));
+			}else if (keys[83]){
+				box.position.subSelf(viewDir.clone().multiplyScalar(10));
+			}
+			
+			viewDir.x = Math.sin(playerRotation);
+			viewDir.y = 0;
+			viewDir.z = Math.cos(playerRotation);
+						
+						
+			var cross = new THREE.Vector3();
+			box.rotation.y = playerRotation;
+			cross.cross(viewDir, new THREE.Vector3(0, 1, 0));
+			camera.position = box.position.clone().addSelf(cross.clone().multiplyScalar(25));
+			camera.position.subSelf(viewDir.clone().multiplyScalar(50));
+			camera.position.y = 70;
+			camera.lookAt(box.position.clone().addSelf(viewDir.clone().multiplyScalar(100).addSelf(new THREE.Vector3(0, 70, 0))));
+			
+			sl.target.position = box.position.clone().addSelf(viewDir.clone().multiplyScalar(100).addSelf(new THREE.Vector3(0, 20, 0)));
+			
+			//camera.position.x = box.position.x + cPos.x;	
+			//camera.position.y = box.position.y + cPos.y;	
+			//camera.position.z = box.position.z + cPos.z;	
+			
+			if (nextBFS < Date.now()){
+				nextBFS = Date.now() + 100;
+				//PATH FINDING FOR ENEMIES
+				//start the BFS from the player
+				var queue = [];
+				var seen = [];
+				//init all nodes to unseen
+				for (var i = 0; i < 21; i++){
+					var row = [];
+					for (var j = 0; j < 21; j++){
+						row.push(false);
+					}
+					seen.push(row);
+				}
+				
+				//push the player's closest node into the queue
+				var pij = getIJ(box.position);
+				queue.push([pij, pij]); //format of current, last
+				seen[pij[0]][pij[1]] = true;
+				while (queue.length > 0){
+					var node = queue.shift();
+					
+					//find any zombie at this node
+					for (var i in enemies){
+						var enemy = enemies[i];
+						
+						if (enemy.target) continue;
+						
+						var ij = getIJ(enemy.mesh.position);
+						
+						//set that zombie to go to the node before this current one (one node closer to the player)
+						if (ij[0] == node[0][0] && ij[1] == node[0][1]){
+							enemy.target = waypoints[node[1][0]][node[1][1]];
+						}
+					}
+					
+					//add the adj nodes from current to the queue					
+					for (var e in edges[node[0][0]][node[0][1]]){
+						var edge = edges[node[0][0]][node[0][1]][e];
+						if (seen[edge[0]][edge[1]]) continue;
+						if (Math.random() > .6) continue;
+						queue.push([ [edge[0], edge[1]], node[0] ]);
+						seen[edge[0]][edge[1]] = true;
+					}
+					
+					/*
+					for (var i = -1; i <=1; i++){
+						for (var j = -1; j <= 1; j++){
+							if (node[0][0]+i < 0 || node[0][0]+i >= 21 || node[0][1]+j < 0 || node[0][1]+j >= 21) continue;
+							if (seen[node[0][0]+i][node[0][1]+j]) continue;
+							if (Math.random() > .7) continue;
+							queue.push([ [node[0][0]+i, node[0][1]+j], node[0] ]);
+							seen[node[0][0]+i][node[0][1]+j] = true;
+						}
+					}
+					*/
+				}
+			}
+				
+			
+					
+			
+			for (var i in enemies){
+				enemies[i].update(delta);
+			}
+			
+		}
+		
+		var lastCalledTime;
+		var fps;
+		var fpsSum = 0;
+		var fpsCount = 0;
+		function render(){
+			requestAnimationFrame(render);
+			
+			if(!lastCalledTime) {
+				lastCalledTime = new Date().getTime();
+				fps = 0;
+				return;
+			}
+			delta = (new Date().getTime() - lastCalledTime)/1000;
+			lastCalledTime = new Date().getTime();
+			fps = 1/delta;
+			fpsCount++;
+			fpsSum += fps;
+			$("#fps").html(fpsSum/fpsCount);
+			renderer.render(scene, camera);
+		}
+		requestAnimationFrame(render);
+		
+		$(window).keydown(function(event){
+			keys[event.keyCode] = true;
+		});		
+		
+		$(window).keyup(function(event){
+			keys[event.keyCode] = false;
+		});	
+		
+		$(window).mousemove(function(event){
+			if (!box) return;
+			return;
+			
+			var x = event.pageX - $("#container").offset().left;
+			var y = event.pageY - $("#container").offset().top;
+			
+			x = ( x / WIDTH ) * 2 - 1;
+			y = - ( y / HEIGHT ) * 2 + 1;
+						
+			var
+				startVector = new THREE.Vector3(),
+				endVector = new THREE.Vector3(),
+				dirVector = new THREE.Vector3(),
+				goalVector = new THREE.Vector3(),
+				t;
+
+			startVector.set( x, y, -1.0 );
+			endVector.set( x, y, 1.0 );
+			
+			// Convert back to 3D world coordinates
+			var projector = new THREE.Projector();
+			startVector = projector.unprojectVector( startVector, camera );
+			endVector = projector.unprojectVector( endVector, camera );
+			
+			// Get direction from startVector to endVector
+			dirVector.sub( endVector, startVector );
+			//dirVector.y += 40;
+			dirVector.normalize();
+			
+			// Find intersection where y = 0
+			t = startVector.y / - ( dirVector.y );
+
+			// Find goal point
+			goalVector.set( startVector.x + t * dirVector.x,
+							startVector.y + t * dirVector.y,
+							startVector.z + t * dirVector.z );
+						
+			/*
+			if (event.which == 1){
+				var line;
+				var lineGeometry = new THREE.Geometry();
+				var lineMat = new THREE.LineBasicMaterial({color: 0xffffff, lineWidth: 1});
+				lineGeometry.vertices.push(new THREE.Vector3(box.position.x, 40, box.position.z), goalVector);
+				line = new THREE.Line(lineGeometry, lineMat);
+				scene.add(line);
+			}
+			*/
+			
+			var nGoal = goalVector.clone();
+			nGoal.y = 40;
+			var center = new THREE.Vector3(box.position.x, 40, box.position.z);
+			var top = new THREE.Vector3(box.position.x+500, 40, box.position.z);
+			var vecTop = top.clone().subSelf(center).normalize();
+			var vecOther = nGoal.clone().subSelf(center).normalize();	
+			if (vecOther.z < 0)
+				box.rotation.y = Math.acos(vecTop.dot(vecOther))+Math.PI/2-.05;
+			else
+				box.rotation.y = -Math.acos(vecTop.dot(vecOther))+Math.PI/2-.05;
+				
+			
+			sl.target.position = nGoal.clone();
+				
+		});
+		
+		$(window).mousedown(function(event){
+					
+		});
+		
+		var bench = null;
+		var box = null;
+						
+		var then = Date.now();
+		setInterval(function(){
+			var now = Date.now();
+			var delta = now - then;
+
+			update(delta / 1000);
+
+			then = now;		
+		}, 40);
+						
+		var enemies = [];
+		modelLoader.load( "man.js", function ( geometry ) {
+			for (var i = 0; i < 100; i++){
+				var scaleFactor = 7;
+				var enemy = new Enemy();
+				enemy.mesh = new THREE.Mesh( geometry, new THREE.MeshFaceMaterial() );	
+				enemy.mesh.scale.set( scaleFactor, scaleFactor, scaleFactor );
+				enemy.mesh.position.set(1000, 0, 1000);
+				scene.add(enemy.mesh);
+				enemies.push(enemy);
+			}
+		});	
+		
+		Entity = function(){
+			this.mesh = null;
+		}
+		
+		Entity.prototype = {
+			constructor: Entity,
+			
+			hitTest: function(entity){
+				//assumes both entities have a mesh and a bounding box
+				var bbox1 = this.mesh.geometry.boundingBox;
+				var bbox2 = entity.mesh.geometry.boundingBox;
+				var aMax = bbox1.max;
+				var bMax = bbox2.max;
+				var aMin = bbox1.min;
+				var bMin = bbox2.min;
+				
+				if (aMax.x >= bMin.x && aMin.x <= bMax.x &&
+					aMax.y >= bMin.y && aMin.y <= bMax.y &&
+					aMax.z >= bMin.z && aMin.z <= bMax.z){
+					return true;
+				}
+				
+				return false;
+			}
+		}
+		
+		Enemy = function() {
+			this.mesh = null;
+			this.target = null;
+			this.SPEED = Math.random()*2.0+2;
+		}
+
+		Enemy.prototype = {
+			constructor: Enemy,
+
+			update: function(delta){			
+				//if close enough to the player, just walk towards player
+				var dir = null;			
+				
+				if (this.target){
+					dir = this.target.clone().subSelf(this.mesh.position).normalize();
+									
+					if (this.target.distanceTo(this.mesh.position) < 50){
+						this.target = null;
+					}			
+				}	
+				
+				if (this.mesh.position.distanceTo(box.position) < 100){
+					dir = box.position.clone().subSelf(this.mesh.position).normalize();
+				}
+				
+				if (dir){
+					var center = new THREE.Vector3(this.mesh.position.x, 0, this.mesh.position.z);
+					var top = new THREE.Vector3(this.mesh.position.x+500, 0, this.mesh.position.z);
+					var vecTop = top.clone().subSelf(center).normalize();
+					if (dir.z < 0)
+						this.mesh.rotation.y = Math.acos(vecTop.dot(dir))+Math.PI/2-.05;
+					else
+						this.mesh.rotation.y = -Math.acos(vecTop.dot(dir))+Math.PI/2-.05;	
+				
+					this.mesh.position.addSelf(dir.multiplyScalar(this.SPEED));					
+				}		
+			}
+			
+		}
+		
+		function getIJ(position){
+			return [parseInt((1150 - position.z)/100), parseInt((1150 - position.x) / 100)];
+		}
+				
+		debugaxis(100);
+	</script>
+</html>

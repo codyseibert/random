@@ -1,0 +1,20 @@
+[06-Nov-2014 12:18:23 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /home3/codyseib/public_html/b/demo/flash_cards/php/app.php:8
+Stack trace:
+#0 /home3/codyseib/public_html/b/demo/flash_cards/php/app.php(8): PDO->__construct('mysql:host=loca...', 'root', 'BigBlueDog')
+#1 {main}
+  thrown in /home3/codyseib/public_html/b/demo/flash_cards/php/app.php on line 8
+[06-Nov-2014 12:18:36 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /home3/codyseib/public_html/b/demo/flash_cards/php/app.php:8
+Stack trace:
+#0 /home3/codyseib/public_html/b/demo/flash_cards/php/app.php(8): PDO->__construct('mysql:host=loca...', 'root', 'BigBlueDog')
+#1 {main}
+  thrown in /home3/codyseib/public_html/b/demo/flash_cards/php/app.php on line 8
+[06-Nov-2014 12:18:43 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /home3/codyseib/public_html/b/demo/flash_cards/php/app.php:8
+Stack trace:
+#0 /home3/codyseib/public_html/b/demo/flash_cards/php/app.php(8): PDO->__construct('mysql:host=loca...', 'root', 'BigBlueDog')
+#1 {main}
+  thrown in /home3/codyseib/public_html/b/demo/flash_cards/php/app.php on line 8
+[06-Nov-2014 12:19:08 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /home3/codyseib/public_html/b/demo/flash_cards/php/app.php:8
+Stack trace:
+#0 /home3/codyseib/public_html/b/demo/flash_cards/php/app.php(8): PDO->__construct('mysql:host=loca...', 'root', 'BigBlueDog')
+#1 {main}
+  thrown in /home3/codyseib/public_html/b/demo/flash_cards/php/app.php on line 8

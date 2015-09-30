@@ -1,0 +1,102 @@
+<!doctype html>
+
+<style>
+	.block{
+		display: inline-block;
+		vertical-align: top;
+	}	
+
+	.arrow{
+		width: 20px;
+	}
+	.missing{
+		color: red;
+	}
+</style>
+
+<link rel="stylesheet" type="text/css" href="css/foundation.min.css">
+
+
+<html lang="en" data-framework="angularjs">
+	<head>
+		<meta charset="utf-8">
+		<title>AngularJS • TodoMVC</title>
+		<style>[ng-cloak] { display: none; }</style>
+	</head>
+	<body ng-app="beads">
+		<ng-view />
+
+		<script type="text/ng-template" id="beads-index.html">
+			<div class="row">		
+				<div class="large-4 medium-12 columns">
+						<h2>Bead Stock</h2>
+					  <form id="form" ng-submit="addColor()">
+						  <label>Color #</label>
+						  <input id="color" ng-model="color" autofocus />
+						  <input type="submit" style="position: absolute; left: -9999px; width: 1px; height: 1px;"/>
+					  </form>	
+
+						  <ul id="stock_list">
+							  <li ng-repeat="(key, value) in stock">
+								  {{value.color}} <input type="number" ng-model="value.count"/>
+							  </li>
+						  </ul>
+					  </div>
+					  
+					  <div class="large-4 medium-12 columns">
+						<h2>Patterns</h2>
+						  <ul id="patterns">
+							  <li ng-repeat="(key, value) in patterns" ng-click="clicked(key)">
+								  {{value.name}}
+							  </li>
+						  </ul>	
+							<a href="#/patterns/create">Create New Pattern</a>
+					  </div>
+
+					  <div class="large-4 medium-12 columns">
+						<h2>Requirements</h2>
+						  <ul>
+							  <li ng-repeat="(key, value) in selectedPattern">
+								  {{value.color}} {{value.count}} 
+								  <img class="arrow" src="images/arrow.png" span ng-hide="getBeadDifference(value.color) < 0">
+								  <span class="missing" ng-show="getBeadDifference(value.color) < 0">{{getBeadDifference(value.color)}}</span>
+							  </li>
+						  </ul>
+						  
+							<form ng-submit="subtractPattern()">
+									 <input type="submit" value="Subtact" />
+						   </form>		
+					  </div>
+			  
+			</div>
+		</script>
+
+		<script type="text/ng-template" id="beads-pattern-create.html">
+			<form id="form" ng-submit="addColor()">
+				<label>Color #</label>
+				<input id="color" ng-model="color" autofocus />
+				<input type="submit" style="position: absolute; left: -9999px; width: 1px; height: 1px;"/>
+			</form>	
+
+			<ul>
+				<li ng-repeat="(key, value) in pattern">
+					{{value.color}} <input type="number" ng-model="value.count"/>
+				</li>
+			</ul>
+
+			<form ng-submit="save()">
+				<label>Pattern Name:</label>
+				<input ng-model="name" />
+				<input type="submit" value="Save" />
+			</form>	
+		</script>
+
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="bower_components/angular-route/angular-route.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/controllers/beadsCtrl.js"></script>
+		<script src="js/controllers/beadsPatternCreateCtrl.js"></script>
+		<script src="js/services/beadsStorage.js"></script>
+		<script src="js/services/patterns.js"></script>
+	</body>
+</html>

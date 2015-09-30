@@ -1,0 +1,70 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+<style> 
+	body{
+		margin: 0px;
+		padding: 0px;
+		overflow: hidden;
+        background-image: url('space.jpg');
+        background-repeat: repeat;
+	}
+</style>
+
+<html>
+	<body>
+	
+	</body>
+	
+	<script>
+		
+		var Rocket = function(){
+			this.$div = $("<div><img src='rocket.png' style='width: 25px'></div>");
+			this.$div.css("width", "30px");
+			this.$div.css("height", "30px"); 
+			this.$div.css("position", "absolute");
+			
+			this.angle = Math.random() * (Math.PI - .4) + .2;
+			this.x = $("body").width() / 2;
+			this.y = $("body").height();
+			
+			this.$div.offset({left: this.x, top: this.y});
+				
+			var degree = parseInt(-this.angle * 180 / Math.PI) + 45;
+			this.$div.css("transform", "rotate(" + degree + "deg)");
+			
+			this.maxMoves = 500;
+		}
+		
+		var rockets = [];
+		
+		var SPEED = 2.0;
+		
+		var moveRockets = function(){
+			for (var i = rockets.length - 1; i >= 0; i--){
+				var rocket = rockets[i];
+				
+				rocket.x += SPEED * Math.cos(rocket.angle);
+				rocket.y -= SPEED * Math.sin(rocket.angle);
+				
+				rocket.$div.offset({left: rocket.x, top: rocket.y});
+				
+				rocket.maxMoves--;
+				if (rocket.maxMoves < 0){
+					rockets.splice(i, 1);
+					rocket.$div.remove();
+				}
+			}
+		}
+		
+		var createRocket = function(){
+			var rocket = new Rocket();
+			$("body").append(rocket.$div);
+			rockets.push(rocket);
+		}
+		
+		setInterval(createRocket, 400);
+		createRocket();
+		setInterval(moveRockets, 10);
+		
+	</script>
+</html>

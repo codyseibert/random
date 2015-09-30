@@ -1,0 +1,354 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Blog of Cody Seibert</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+  </head>
+  <body>
+    <style>
+        body{
+            background-color: rgba(199, 186, 167, 0.7);
+        }
+
+        .entry{
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            text-align: center;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        .entryWrapper{
+           padding: 20px; 
+        }
+
+        .entry:hover{
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .title{
+            font-size: 30px;
+            font-weight: bold;
+            color: #6ec5b8;
+        }
+
+        .content{
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        h2{
+            color: #faa900;    
+        }
+
+    </style>
+    
+    <div class="row">
+      <div class="large-12 columns">
+        <h1>Cody Seibert (<a target="_blank" href="http://codyseibert.com/blog">Old Blog</a>)<h1>
+        <h2>Under Construction</h2>
+        <h3><a href="Resume_Of_Cody_Seibert.pdf">resume.pdf</a></h3>
+      </div>
+    </div>
+    
+    <div class="row">
+        <div class="nav large-12 column">
+            <div class="topic" id="programming_nav">Programming</div>
+            <div class="topic" id="art_nav">Art</div>
+            <div class="topic" id="music_nav">Music</div>
+        </div>
+    </div>
+    
+    <div class="row">
+      <div class="large-12 columns" id="programming"></div>
+      <div class="large-12 columns" id="art"></div>
+      <div class="large-12 columns" id="music"></div>
+    </div>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script src="js/vendor/modernizr.js"></script>
+    <script>
+      $(document).foundation();
+
+      $(document).ready(function(){
+        var data = []; 
+        var Entry = function(title, content, image, link, github){
+            this.title = title;
+            this.content = content;
+            this.image = image;
+            this.link = link;
+            this.github = github;
+        }
+
+        data.push(new Entry(
+            "AsteROIDS!",
+            "Multiplayer HTML5 using Node.js and MongoDB for the backend",
+            "asteroids.png",
+            "asteroids",
+            "https://github.com/codyseibert/sidescroller"
+        ));
+
+        data.push(new Entry(
+            "Flash Cards",
+            "Simple app for helping in the memorization of anything.  Originially created for helping me memorize peoples names, but it could be used for any type of subject.",
+            "flash_cards.png",
+            "flash_cards",
+            "https://github.com/codyseibert/flash-cards"
+        ));
+
+        data.push(new Entry(
+            "Bead Stock Tracker",
+            "This project was main created to investigate Angular.js.  The intent of the application was to keep track of my perler bead inventory and determine if I have enough beads to create a particular pattern.",
+            "beads.png",
+            "beads/index.html#",
+            "https://github.com/codyseibert/bead-inventory"
+        ));
+
+        data.push(new Entry(
+            "3D CSS Ring",
+            "Prototype for making a 3d ring using pure CSS.",
+            "div_ring.png",
+            "3d_ring",
+            "https://github.com/codyseibert/3d-div-ring"
+        ));
+
+        data.push(new Entry(
+            "3D Zombie Walker",
+            "This was a project to investigate the 3d javascript framework three.js.  I also tried making my own custom 3d models in blender (the barrier and the zombies).",
+            "zombie_walker.png",
+            "zombie_walker",
+            "https://github.com/codyseibert/3d-zombie-walker"
+        ));
+
+        data.push(new Entry(
+            "Rocket Launch",
+            "Since I lived near space coast, I figured it would be suitable to make a fun CSS based app to launch off rockets.",
+            "rocket_launch.png",
+            "rocket_launch",
+            "https://github.com/codyseibert/rocket-launch"
+        ));
+
+        data.push(new Entry(
+            "Hodor Rain",
+            "Because who doesn't love both 'The Matrix' and 'Game of Throne'?",
+            "hodor_rain.png",
+            "hodor_rain",
+            "https://github.com/codyseibert/hodor-rain"
+        ));
+
+
+        data.push(new Entry(
+            "Maze Snake",
+            "Brushing up on BFS for generating a cool looking maze.",
+            "maze_snake.png",
+            "maze_snake",
+            "https://github.com/codyseibert/maze-snake"
+        ));
+
+        data.push(new Entry(
+            "Whiteboard",
+            "Simple javascript code to allow drawing of lines on a html5 canvas element.  Here I drew an ER diagram which looks like a 3 year old drew it =P",
+            "whiteboard.png",
+            "whiteboard",
+            "https://github.com/codyseibert/whiteboard"
+        ));
+
+        data.push(new Entry(
+            "Focus",
+            "Someone mentioned that one way to improve focus was to flash colored cards with words corresponding to colors which are also colored.  The goal is to type the color of the word.",
+            "focus.png",
+            "focus",
+            "https://github.com/codyseibert/focus-trainer"
+        ));
+
+
+        data.push(new Entry(
+            "NN Stock Trainer",
+            "Back when I was investigating Neural Networks, I created this Java project to download historical stock prices from yahoo and run them through a neural network to try and predict the market.",
+            "nnstock.png",
+            "nnstock",
+            "https://github.com/codyseibert/NNStockTrainer"
+        ));
+
+        for (var i = 0; i < data.length; i++){
+            (function(ind){
+
+            var entry = data[i];
+
+            var $entryWrapper = $("<div></div>");
+            $entryWrapper.addClass("entryWrapper large-4 medium-6 small-12 columns");
+
+            var $entry = $("<div></div>");
+            $entry.addClass("entry");
+            var $title = $("<div></div>");
+            $title.addClass("title");
+            $title.html(entry.title);
+
+            var $content = $("<div></div>");
+            $content.addClass("content");
+            $content.html(entry.content);
+
+            var $github = $("<div></div>");
+            $github.addClass("github");
+            $github.html("<a target='_blank' href='" + entry.github + "'>Github</a>");
+
+            var $demo = $("<div></div>");
+            $demo.addClass("demo");
+            $demo.html("<a target='_blank' href='demo/"+entry.link+"'/index.html>DEMO</a>");
+            
+            var $image = $("<img>");
+            $image.attr("src", "img/screenies/" + entry.image);
+
+            $entry.append($title);
+            $entry.append($content);
+            $entry.append($image);
+            $entry.append($github);
+            $entry.append($demo);
+
+            $entryWrapper.append($entry);
+            $("#programming").append($entryWrapper);
+            })(i);
+        }
+       
+        var Art = function(title, url){
+           this.title = title;
+           this.url = url; 
+        };
+
+        var arts = [
+            new Art("Fallout 3", "https://scontent-a-atl.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/1621885_10202933251276324_371135795656309449_n.jpg?oh=697eb8ee4f4c643eda326cf85a44fbba&oe=54E95245"),
+            new Art("Alucard, Hellsing", "https://scontent-b-atl.xx.fbcdn.net/hphotos-xpf1/v/t1.0-9/10371360_10202933250676309_3535052912874003517_n.jpg?oh=e711a4c03244d15ae2e3c52895b67a3f&oe=54E53DEF"),
+            new Art("Ultralisk, Starcraft", "https://scontent-b-atl.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/10401344_10202933249716285_7866256559385869442_n.jpg?oh=efe3ad8a530b15f08ae35a569824d15a&oe=54E44863"),
+            new Art("Horse", "https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/10413428_10202933249036268_9175094082177320165_n.jpg?oh=9d7c0ee816fa90a475298fbf03bef5ee&oe=54D84F37&__gda__=1424329800_d4fda86519ad456c795cba7e8d518b7f"),
+            new Art("Strider, Half Life 2", "https://scontent-b-atl.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/10422219_10202938018835510_2880211264733442341_n.jpg?oh=9262d35f278a62a42bc2d54d73248ab1&oe=54F6E79A"), 
+            new Art("Tank, Left 4 Dead", "https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xpa1/v/t1.0-9/15278_10202938703132617_9162327725791406530_n.jpg?oh=0d90694de08cdcc4e27cfcb2eb5f6e9d&oe=54E2BC77&__gda__=1424490570_98951de0e80a9eaf6ed140655cca4dfa"),
+            new Art("Joker, Batman", "https://scontent-b-atl.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/1010127_10202938994619904_8830305014111874275_n.jpg?oh=5c6bd6c61e48f1ad0a541810931b79fc&oe=54F08501"),
+            new Art("Zombie, Half Life", "https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-xfa1/v/t1.0-9/10407330_10202939199385023_5505013901692098230_n.jpg?oh=3baff80ae56e5211eb6adc1417480df7&oe=54DB017A&__gda__=1423676823_35f0d858b3b916d8ce8a73b002c5893e"),
+            new Art("Orc, War Craft 3", "https://scontent-a-atl.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/r270/10731204_10202943505532674_8599540599158671244_n.jpg?oh=0b766a89528b17d77895e1c31485c2e9&oe=54DAF6C1"),
+            new Art("Hydralisk, Starcraft", "https://scontent-a-atl.xx.fbcdn.net/hphotos-xpa1/v/l/t1.0-9/r90/63395_10202944597319968_511630779527694999_n.jpg?oh=ae796ab8b6b25e4de9768fd173941606&oe=54E59D56"),
+            new Art("Kick-Ass, Kick-Ass", "https://scontent-a-atl.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/r90/10696199_10202946520128037_6561817521270652143_n.jpg?oh=ec180463e2b68aa98ce073c1b2ecf97d&oe=54D40783"),
+            new Art("Skull", "https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xfp1/v/t1.0-9/10709_10202948518337991_2551351860227273495_n.jpg?oh=76685db40ad63ea3750a75a6136c7d87&oe=54D1B521&__gda__=1425185210_2677a11c75b2ff57954cb2320819e6e5"),
+            new Art("Megaman", "https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/r90/1780835_10202974318302974_396111896623779159_n.jpg?oh=a568f0a6dc344ee3aafbfea62f038e93&oe=54DB17AE&__gda__=1424452737_dcc0e66e155e6c3ed7e3facc36964339"),
+            new Art("Majora's Mask", "https://scontent-b-atl.xx.fbcdn.net/hphotos-xfp1/v/l/t1.0-9/10408674_10202974709352750_4634169244711205157_n.jpg?oh=efbcf11fc260f4583dcb37891b87b9f2&oe=54DC6193"),
+            new Art("Isaac, Dead Space", "https://scontent-a-atl.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/r90/14000_10202978034515877_1873782765536994532_n.jpg?oh=62eb2fa0d4772d200510caddd77104c6&oe=5520439C"),
+            new Art("Slasher, Dead Space", "https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-xap1/v/t1.0-9/10620647_10202984142948584_9065973056361196550_n.jpg?oh=ba958fb6231c8f7cdc4de0aa4bdadedb&oe=54D88566&__gda__=1423277875_a3439678fd6718b018f05882065066c7"),
+            new Art("Elite, Halo", "https://scontent-b-atl.xx.fbcdn.net/hphotos-xpf1/v/t1.0-9/r90/10309487_10202950313622872_8667798022218670616_n.jpg?oh=437a6d5d814fe76de147ae3cb25aacf5&oe=55207039"),
+            new Art("Lightning, FF XIII", "https://scontent-b-atl.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/r180/10690117_10202951142283588_6118392118964067258_n.jpg?oh=ef8f578572256d82d29c22483efe5f23&oe=54EB744C"),
+            new Art("Baneling, Starcraft 2", "https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-xap1/v/t1.0-9/r90/10406788_10202951618255487_878857400441753799_n.jpg?oh=b02ac4d8e9294a28cae5e6508330b8c0&oe=54D5DE0D&__gda__=1425519193_c6f66c68e4e812d23b17de4f64adc565"),
+            new Art("Eye #1", "https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xpa1/v/t1.0-9/r270/10376838_10202956106847699_106846611160618415_n.jpg?oh=07da985c9316bcb4c892bad6e950bfba&oe=54E48B67&__gda__=1424198124_d8917d3bc3f832c44f8497130b8d4ac4"),
+            new Art("Sunflower", "https://scontent-a-atl.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/r90/1920464_10202956109047754_1340615326986229124_n.jpg?oh=c8752b14e1d71b659c79c35ad15dd087&oe=54F007FC"),
+            new Art("V for Vendetta", "https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xaf1/v/t1.0-9/10471513_10202968435755914_5961113742191504622_n.jpg?oh=fc53b5a15c5adb6027b3039de8d63d29&oe=54EFA1E7&__gda__=1424864339_ed2e482b35f4550b46b3e74b47433330"),
+            new Art("Christopher Walkin", "https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xap1/v/t1.0-9/r90/10710772_10202957250036278_9146612757007554588_n.jpg?oh=92663c531a69b149898e5b1d8c1c1dc8&oe=54EAB8B9&__gda__=1424879171_50a5c71acec9b628e22698194964733f"),
+            new Art("Yellow Tiger Swallowtail", "https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-xpa1/v/t1.0-9/10610690_10202973946973691_3152206749514901553_n.jpg?oh=3be93cb656e32d3b85752943bf225067&oe=54E3DF41&__gda__=1423942231_6a698c2dea12882a5a9dee6882c5c57b"),
+            new Art("Charlotte", "https://scontent-b-atl.xx.fbcdn.net/hphotos-xpf1/v/t1.0-9/r90/10429258_10202959686017176_6402144451558415952_n.jpg?oh=ae8875fcb325de779eb74781ead89c1f&oe=54D4ED69"),
+            new Art("Tychus, Starcraft 2", "https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-xap1/v/t1.0-9/r270/10711150_10202961154813895_4199204593149253848_n.jpg?oh=8b26c4d436337b067d2596ebb1d1a68d&oe=54D4162B&__gda__=1423739630_94fd09cf4f9946ce2a5bf154c997724a"),
+            new Art("Hell Knight, Doom 3", "https://scontent-a-atl.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/10357170_10202967465011646_595111508985130286_n.jpg?oh=915bdb992611167d8e485dbd1ed53b93&oe=54D2C1FF"),
+            new Art("Hei, Darker Than Black", "https://scontent-a-atl.xx.fbcdn.net/hphotos-xaf1/v/t1.0-9/r180/1508558_10202976685602155_7100216670055547354_n.jpg?oh=44243932a12f458388f19e7b376d9455&oe=54D580CE"),
+            new Art("Stalker, Dead Space", "https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xpa1/v/t1.0-9/10362863_10202984027305693_2761753591862279060_n.jpg?oh=6cdf7cba1a74cf51f1c899a45aa233a5&oe=54DE51D4&__gda__=1424082882_1b6be925d96f000ef154c38f464012da"),
+            new Art("Alien, Aliens", "https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/10801758_10203013670886764_1196448991897533224_n.jpg?oh=ac5f694c16642149d6d5d91a01a74394&oe=54D4FFA6&__gda__=1423763673_9b324b90b10d7457b2ef44504d43fb78")
+        ];
+
+        for (var i = arts.length - 1; i >= 0; i--){
+            (function(art){
+                var $entryWrapper = $("<div></div>");
+                $entryWrapper.addClass("entryWrapper large-4 medium-6 small-12 columns");
+
+                var $entry = $("<div></div>");
+                $entry.addClass("entry");
+                var $title = $("<div></div>");
+                $title.addClass("title");
+                $title.html(art.title);
+
+                var $content = $("<div></div>");
+                $content.addClass("content");
+                $content.html("");
+                
+                var $image = $("<img>");
+                $image.attr("src", art.url);
+
+                $entry.append($title);
+                $entry.append($content);
+                $entry.append($image);
+                $entryWrapper.append($entry);
+                $("#art").append($entryWrapper);
+
+                $entry.click(function(){
+                    window.open(art.url, "_blank");
+                });
+            })(arts[i]);
+        }
+
+        
+        var Music = function(title, url, img){
+            this.title = title;
+            this.url = url;
+            this.img = img;
+        }
+
+        var music = [
+            new Music("Final Fantasy X Piano Collections - Attack", "https://www.youtube.com/watch?v=U8afzMa_HLs&list=UUsrVDPJBYeXItETFHG0qzyw", "https://i.ytimg.com/vi/U8afzMa_HLs/mqdefault.jpg"),
+            new Music("Final Fantasy VIII Piano Collections - Find Your Way", "https://www.youtube.com/watch?v=vFdQC7B5qRM&list=UUsrVDPJBYeXItETFHG0qzyw", "https://i.ytimg.com/vi/vFdQC7B5qRM/mqdefault.jpg"),
+            new Music("Final Fantasy X Piano Collections - Via Purifico", "https://www.youtube.com/watch?v=1Ni0KqYPZpo&list=UUsrVDPJBYeXItETFHG0qzyw", "https://i.ytimg.com/vi/1Ni0KqYPZpo/mqdefault.jpg"),
+            new Music("Final Fantasy X Piano Collections - Besaid Island", "https://www.youtube.com/watch?v=lAJCsE7M7V8&list=UUsrVDPJBYeXItETFHG0qzyw", "https://i.ytimg.com/vi/lAJCsE7M7V8/mqdefault.jpg"),
+            new Music("Final Fantasy X Piano Collections - To Zanarkand", "https://www.youtube.com/watch?v=4U9RhvUpXnQ&list=UUsrVDPJBYeXItETFHG0qzyw", "https://i.ytimg.com/vi/4U9RhvUpXnQ/mqdefault.jpg")
+        ];
+
+        for (var i = 0; i < music.length; i++){
+            (function(m){
+                var $entryWrapper = $("<div></div>");
+                $entryWrapper.addClass("entryWrapper large-4 medium-6 small-12 columns");
+
+                var $entry = $("<div></div>");
+                $entry.addClass("entry");
+                var $title = $("<div></div>");
+                $title.addClass("title");
+                $title.html(m.title);
+
+                var $content = $("<div></div>");
+                $content.addClass("content");
+                $content.html("");
+                
+                var $image = $("<img>");
+                $image.attr("src", m.img);
+
+                $entry.append($title);
+                $entry.append($content);
+                $entry.append($image);
+                $entryWrapper.append($entry);
+                $("#music").append($entryWrapper);
+
+                $entry.click(function(){
+                    window.open(m.url, "_blank");
+                });
+            })(music[i]);
+        }
+
+        var hideAll = function(){ 
+            $("#art").hide();
+            $("#programming").hide();
+            $("#music").hide();
+        }
+        
+        $("#programming_nav").click(function(){
+           hideAll(); 
+            $("#programming").show();
+        });
+        $("#programming_nav").click();
+
+        $("#art_nav").click(function(){
+           hideAll(); 
+            $("#art").show();
+        });
+
+        $("#music_nav").click(function(){
+           hideAll(); 
+            $("#music").show();
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<html>
+	<body>
+		<canvas id="canvas" width="800" height="800"></canvas>
+	</body>
+	
+	
+	<script>  
+		var width = 800;
+		var height = 800;
+		var startX = width / 2;
+		var startY = height / 2;
+		
+		var c = document.getElementById("canvas");
+		var ctx = c.getContext("2d");
+		ctx.lineWidth = 1;
+		
+		var spacing = 10;
+		var color = 0x0;
+		
+		var directions = [
+			{x: spacing, y: 0},
+			{x: 0, y: spacing}, 
+			{x: -spacing, y: 0}, 
+			{x: 0, y: -spacing}
+		];
+		  
+		var edges = [];
+		
+		var addEdge = function(edge){
+			edge.life = 10;
+			edge.color = color;
+			color++;
+			if (color > 0xFFFFFF){
+				color = 0x0;
+			}
+			edges.push(edge);
+		}
+		
+		var prune = function(){ 
+			for (var i = edges.length - 1; i >= 0; i--){
+				var edge = edges[i];
+				edge.life--;
+				
+				if (edge.life <= 0 && queue.length > 5){
+					edges.splice(i, 1);
+					delete seen[edge.x][edge.y];
+				}
+			}
+		}
+		
+		var draw = function(){ 
+			ctx.clearRect(0, 0, width, height);
+			for (var i = edges.length - 1; i >= 0; i--){
+				var edge = edges[i];
+				var lastX = edge.lastX;
+				var lastY = edge.lastY;
+				var currentX = edge.x;
+				var currentY = edge.y; 
+				var distance = Math.sqrt((currentX - startX)*(currentX - startX) 
+					+ (currentY - startY)*(currentY - startY)); 
+				ctx.strokeStyle = "#" + edge.color;  
+				ctx.beginPath();
+				ctx.moveTo(lastX, lastY);
+				ctx.lineTo(currentX, currentY);
+				ctx.lineWidth = Math.max(1, edge.life / 3);
+				ctx.stroke();
+			}
+		}
+		
+		
+		
+		var queue = [];
+		var seen = {}; 
+		var edge = {lastX: startX, lastY: startY, x: startX, y: startY};
+		queue.push(edge);
+		addEdge(edge);
+		
+		var step = function(){ 
+			count = Math.max(1, queue.length / 5);
+			while (count > 0){
+				count--;
+				if (queue.length <= 0) break;
+			
+				var cur = queue.shift();
+				var lastX = cur.lastX;
+				var lastY = cur.lastY;
+				var currentX = cur.x;
+				var currentY = cur.y; 
+				 
+				for (var i in directions){
+					if (Math.random() > 0.5 && queue.length > 5) continue;
+					
+					var direction = directions[i]; 
+					
+					var nextX =  currentX + direction.x;
+					var nextY = currentY + direction.y; 
+					 
+					if (!seen[nextX]){
+						seen[nextX] = {}; 
+					}
+					
+					if (nextX > 0 && nextX < width && nextY > 0 && nextY < height
+						&& !seen[nextX][nextY]){ 
+						seen[nextX][nextY] = true;
+						edge = {lastX: currentX, lastY: currentY, x: nextX, y: nextY}; 
+						queue.push(edge);
+						addEdge(edge);
+					}
+				} 	 
+			}
+		} 
+		 
+		setInterval(prune, 200); 
+		setInterval(draw, 10);
+		setInterval(step, 10);  
+	</script>  
+</html>

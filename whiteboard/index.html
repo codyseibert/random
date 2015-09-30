@@ -1,0 +1,99 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script>
+	$(document).ready(function(){
+		
+		var LINE_WIDTH = 3;
+		
+		var canvas = $("#canvas")[0];
+		var context = canvas.getContext("2d");
+		
+		var lines = [];
+		var line = new Line([]);
+		lines.push(line);
+		
+		function resizeCanvas(){
+			canvas.width = window.innerWidth;
+			canvas.height = window.innerHeight;
+		}
+		resizeCanvas();
+		
+		context.fillStyle = "#00FF00";
+		context.fillRect(0, 0, window.innerWidth, window.innerHeight);
+		
+		var drawing = false;
+		var mouseDownX = 0;
+		var mouseDownY = 0;
+		
+		function Line(dots){
+			this.dots = dots;
+		}
+		
+		function Dot(x, y){
+			this.x = x;
+			this.y = y;
+		}
+		
+		$(document).mousedown(function(){
+			mouseDownX = event.pageX;
+			mouseDownY = event.pageY;
+			drawing = true;
+		});
+		
+		$(document).mouseup(function(){
+			drawing = false;
+			line = new Line([]);
+			lines.push(line);
+		});
+		
+		$(document).mousemove(function(){
+			if (drawing){
+				var dot = new Dot(event.pageX, event.pageY);
+				line.dots.push(dot);
+			}
+		});
+		
+		$(window).resize(function(){
+			resizeCanvas();
+		});
+		
+		function render(){
+			context.clearRect(0, 0, window.innerWidth, window.innerHeight);
+			
+			context.strokeStyle = "black";
+			for (var i = 0; i < lines.length; i++){
+				var line = lines[i];
+				if (line.dots.length < 1) continue;
+				
+				var dots = line.dots;
+				for (var j = 1; j < dots.length; j++){				
+					var curDot = dots[j];
+					var lastDot = dots[j - 1];
+					context.beginPath();
+					context.lineWidth = LINE_WIDTH;
+					context.moveTo(lastDot.x, lastDot.y);
+					context.lineTo(curDot.x, curDot.y);
+					context.stroke();
+				}
+			}
+			
+			requestAnimationFrame(render);
+		}
+		
+		requestAnimationFrame(render);
+	});
+</script>
+
+<style>
+html, body{
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+}
+</style>
+
+<html>
+	<body>
+		<canvas id="canvas" />
+	</body>
+</html>

@@ -1,0 +1,95 @@
+<project>
+	
+	<property name="src.main.dir"     			value="src/main" />
+	<property name="src.test.dir"    			value="src/test" />
+    <property name="build.dir"   				value="build"/>
+    <property name="main_classes.dir" 			value="${build.dir}/classes/main"/>
+    <property name="test_classes.dir" 			value="${build.dir}/classes/test"/>
+    <property name="reports.dir"				value="reports"/>
+    <property name="jar.dir"     				value="${build.dir}/jar"/>
+    <property name="lib"		 				value="lib"/>
+    <property name="main-class-controller"  	value="controller.StockTrainerController"/>
+    <property name="main-class-trainer"  		value="trainer.NNTrainer"/>
+    <property name="main-class-downloader"  	value="downloader.StockDownloader"/>
+    <property name="main-class-predictor" 		value="predictor.StockPredictor"/>
+	
+	<property name="src.dir" location="src" />
+	  
+	  <property name="build.dir" location="bin" />
+
+	  <!-- Variables used for JUnit testin -->
+	  <property name="test.dir" location="src" />
+	  <property name="test.report.dir" location="testreport" />
+
+	  <!-- Define the classpath which includes the junit.jar and the classes after compiling-->
+	  <path id="junit.class.path">
+	    <pathelement location="${build.dir}" />
+	    <fileset dir="lib/">
+	        <include name="**/*.jar"/>
+	    </fileset>
+	  </path>
+
+
+	  <!-- Deletes the existing build, docs and dist directory-->
+	  <target name="clean">
+	    <delete dir="${build.dir}" />
+	    <delete dir="${test.report.dir}" />
+	  </target>
+
+	  <!-- Creates the  build, docs and dist directory-->
+	  <target name="makedir">
+	    <mkdir dir="${build.dir}" />
+	    <mkdir dir="${test.report.dir}" />
+	  </target>
+
+	  <!-- Compiles the java code (including the usage of library for JUnit -->
+	  <target name="compile" depends="clean, makedir">
+	    <javac srcdir="${src.dir}" destdir="${build.dir}" includeantruntime="false">
+	      <classpath refid="junit.class.path" />
+	    </javac>
+	  </target>
+
+	  <!-- Run the JUnit Tests -->
+	  <!-- Output is XML, could also be plain-->
+	  <target name="junit" depends="compile">
+	    <junit printsummary="on" fork="true" haltonfailure="yes">
+	      <classpath refid="junit.class.path" />
+	      <formatter type="xml" />
+	      <batchtest todir="${test.report.dir}">
+	        <fileset dir="${src.dir}">
+	          <include name="**/*Test*.java" />
+	        </fileset>
+	      </batchtest>
+	    </junit>
+	  </target>
+	
+	<target name="jar">
+	    <jar destfile="${jar.dir}/controller.jar" basedir="${main_classes.dir}">
+	        <manifest>
+	            <attribute name="Main-Class" value="${main-class-controller}"/>
+	        </manifest>
+	        <zipgroupfileset dir="${lib}" includes="**/*.jar"/>
+	    </jar>
+		
+		<jar destfile="${jar.dir}/trainer.jar" basedir="${main_classes.dir}">
+	        <manifest>
+	            <attribute name="Main-Class" value="${main-class-trainer}"/>
+	        </manifest>
+	        <zipgroupfileset dir="${lib}" includes="**/*.jar"/>
+	    </jar>
+		
+		<jar destfile="${jar.dir}/downloader.jar" basedir="${main_classes.dir}">
+	        <manifest>
+	            <attribute name="Main-Class" value="${main-class-downloader}"/>
+	        </manifest>
+	        <zipgroupfileset dir="${lib}" includes="**/*.jar"/>
+	    </jar>
+		
+		<jar destfile="${jar.dir}/predictor.jar" basedir="${main_classes.dir}">
+	        <manifest>
+	            <attribute name="Main-Class" value="${main-class-predictor}"/>
+	        </manifest>
+	        <zipgroupfileset dir="${lib}" includes="**/*.jar"/>
+	    </jar>
+	</target>	
+</project>

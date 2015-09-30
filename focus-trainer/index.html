@@ -1,0 +1,114 @@
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script>
+	$(document).ready(function(){
+
+		var colorOfWord;
+
+		var colors = [
+			"blue",
+			"red",
+			"yellow",
+			"cyan",
+			"black",
+			"gray",
+			"green",
+			"orange",
+			"purple",
+			"pink",
+			"tan",
+			"teal"
+		];
+
+		var correct = 0;
+		var time = new Date().getTime();
+
+		$(document).keypress(function(){
+			var code = event.keyCode || event.which;
+
+			if (code === 13){
+				if ($("#color").val() === colorOfWord){
+					correct++;
+					var delta = new Date().getTime() - time;
+					var score = correct / delta * 10000;
+					$("#score").text(score);
+				}else{
+					console.log("WRONG!");
+					correct = 0;
+					time = new Date().getTime();
+				}
+
+				nextColor();
+			}
+		});
+
+		function nextColor(){
+			$("#color").val("");
+
+			var combo = getRandomColorCombo();
+			colorOfWord = combo.text;
+			$("#colorBox").css("background-color", combo.box);
+			$("#colorText").css("color", combo.text);
+			$("#colorText").text(combo.box);
+		}
+
+		function getRandomColor(){
+			return parseInt(Math.random() * colors.length);
+		}
+
+		function getRandomColorCombo(){
+			var boxColorIndex = getRandomColor();
+
+			var textColorIndex = getRandomColor();
+			while (textColorIndex == boxColorIndex){
+				textColorIndex = getRandomColor();
+			}
+
+			var ret = {
+				"box": colors[boxColorIndex],
+				"text": colors[textColorIndex]
+			};
+
+			return ret;
+		}
+
+		nextColor();
+	});
+</script>
+
+<style>
+	body{
+
+	}
+
+	.center{
+		margin: 0 auto;
+		width: 800px;
+	}
+
+	#colorBox{
+		width: 200px;
+		height: 110px;
+		text-align: center;
+		padding-top: 50px;
+	}
+
+	#colorText{
+		font-size: 40px;
+		font-weight: bold;
+	}
+</style>
+
+<html>
+	<body>
+		<div class="center">
+			<div id="score"></div>
+			<input type="text" id="color" />
+			<div id="colorBox">
+				<div id="colorText"></div>
+			</div>
+		</div>
+	</body>
+</html>
+

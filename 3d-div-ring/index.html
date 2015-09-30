@@ -1,0 +1,131 @@
+<style> 
+	body{
+		margin: 0px;
+		padding: 0px;
+		overflow: hidden;
+		background-color: black; 
+        color: white;
+	}
+	
+	.box{
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		background-color: rgba(200, 200, 200, .5);
+		color: white;
+		text-align: center;
+	}
+	
+	.selected{
+		border: 3px solid yellow;
+	} 
+</style>
+
+<html>
+	<body>
+	    Use the left and right arrows to rotate the ring!
+	
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/three.js/r68/three.min.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                
+                function getRandomColor() {
+                    var letters = '0123456789ABCDEF'.split('');
+                    var color = '#';
+                    for (var i = 0; i < 6; i++ ) {
+                        color += letters[Math.round(Math.random() * 15)];
+                    }
+                    return color;
+                }
+                
+                function getRandomLetter(){
+                    var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                    var index = parseInt(letters.length * Math.random());
+                    return letters.charAt(index);
+                }
+                
+                function getLetter(index){
+                    var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                    return letters.charAt(index);
+                }
+                
+                var rotating = false;
+                var xDegree = 0.05;
+                var yDegree = 0.05;
+                var m = new THREE.Matrix4();
+                var xRotate = m.makeRotationX(xDegree);
+                var yRotate = m.makeRotationY(yDegree);
+                var rotate = m.multiplyMatrices(xRotate, yRotate);
+                
+                var r = 300;
+                var phi = Math.PI / 4;          
+                var $planets = [];
+                
+                for (var i = 0; i < 26; i++){               
+                    $box = $("<div></div>");
+                    $box.addClass("box");
+                    $box.css("background-color", getRandomColor());
+                    $box.text(getLetter(i));
+                    $("body").append($box);
+                    $planets.push($box);
+                }
+                
+                var refresh = function(){
+                    var theta = 0;
+                    for (var i = 0; i < $planets.length; i++){
+                        
+                        var x = r * Math.sin(theta) * Math.cos(phi) + r;
+                        var y = r * Math.sin(theta) * Math.sin(phi) + r;
+                        var z = r * Math.cos(theta);
+                        var zIndex = z;
+                        var pos = new THREE.Vector4(x, y, z, 1);
+                        pos = pos.applyMatrix4(rotate);
+                        x = pos.x;
+                        y = pos.y;
+                        z = pos.z;
+                        z = (z + 200) / 400;
+                        z = Math.max(z, 0.2);
+                        
+                                    
+                        var $planet = $planets[i];
+                        $planet.animate({left: x, top: y}, 300, function(){
+                            rotating = false;
+                        });
+                        $planet.css("z-index", parseInt(zIndex) + "");
+                        $planet.css("transform", "scale(" + z + ")");
+                        
+                        theta += 2 * Math.PI / $planets.length;
+                    }
+                }
+                refresh();
+                
+                $(document).keydown(function(){                    
+                    if (rotating) return;
+                    
+                    rotating = true;
+                    var which = event.which;
+                    var LEFT = 37;
+                    var RIGHT = 39;
+                    
+                    
+                    if (which == RIGHT){
+                        var $planet = $planets.shift();
+                        $planet.removeClass("selected");
+                        $planets.push($planet);
+                        $planets[0].addClass("selected");
+                        refresh();
+                    }else if (which == LEFT){
+                        var $planet = $planets.pop();
+                        $planets[0].removeClass("selected");
+                        $planets.unshift($planet);
+                        $planet.addClass("selected");
+                        
+                        refresh();
+                    }
+                }); 
+            });
+        </script>
+    </body> 
+</html>

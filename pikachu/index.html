@@ -1,0 +1,97 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="js/Pikachu.js"></script>
+<script src="js/PathFinder.js"></script>
+<script src="js/PikachuController.js"></script>
+<script src="js/PointPair.js"></script>
+<script src="js/IJPoint.js"></script>
+<script src="js/SeenFilter.js"></script>
+<script src="js/MapElementFilter.js"></script>
+<script src="js/FourPoleTraversalStrategy.js"></script>
+<script src="js/RandomMapPointFinder.js"></script>
+<script src="js/XYPoint.js"></script>
+<script src="js/PhysicsManager.js"></script>
+<script src="js/EdgeMapGenerator.js"></script>
+<script src="js/MapObject.js"></script>
+<script src="js/DisjointSet.js"></script>
+<script src="js/WayPointGenerator.js"></script>
+<script src="js/List.js"></script>
+
+<script>
+	$(document).ready(function(){
+        var canvas = $("#canvas")[0];
+        var context = canvas.getContext("2d");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        var map = [
+          [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+          [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+          [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+          [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+          [0, 0, 0, -1, -1, 0, 0, 0, 0, 0],
+          [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+          [0, 0, 0, 0, 0, -1, -1, -1, 0, 0],
+          [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+          [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+        ];
+        
+        var pikachu = new Pikachu();
+        var controller = new PikachuController(map, pikachu);
+        var physics = new PhysicsManager(map);
+
+
+        var render = function(){
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            var TILE_SIZE = 32;
+            for (var i = 0; i < map.length; i++){
+                for (var j = 0; j < map[0].length; j++){
+                    context.fillStyle = "#FFFFFF";
+                    if (map[i][j] == -1){
+                        context.fillStyle = "#000000";
+                    }
+                    context.fillRect(
+                        j * TILE_SIZE, 
+                        i * TILE_SIZE,
+                        TILE_SIZE,
+                        TILE_SIZE);
+                }
+            }
+           
+           drawWaypoints(); 
+            context.fillStyle = "#FF00FF";
+            context.fillRect(
+                parseInt(pikachu.x), 
+                parseInt(pikachu.y), 
+                TILE_SIZE, 
+                TILE_SIZE);
+        }
+
+        var drawWaypoints = function(){
+            for (var i = 0; i < pikachu.waypoints.length; i++){
+                var wp = pikachu.waypoints[i];
+                context.fillRect(wp.x, wp.y, 5, 5);
+            }
+        }
+
+        var update = function(){
+            controller.step();
+            physics.update(pikachu);
+        }
+
+        setInterval(update, 10);
+        setInterval(render, 10);
+	});
+</script>
+
+<style>
+body{
+    padding: 0px;
+    margin: 0px;
+}
+</style>
+
+<html>
+	<body>
+        <canvas id="canvas" />
+	</body>
+</html>
