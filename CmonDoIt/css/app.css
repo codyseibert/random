@@ -1,0 +1,45 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+.text {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.time {
+    position: relative;
+    width: 300px;
+    height: 400px;
+}
+
+.task {
+    position: absolute;
+    width: 300px;
+
+    background-image: url("../images/paper.jpg");
+    background-repeat: repeat;
+    border: 2px solid #999;
+    box-shadow: 5px 5px 5px #999;
+    border-radius: 10px;
+}
+
+.line {
+    position: absolute;
+    width: 300px;
+}
+
+.marker {
+    position: absolute;
+    width: 300px;
+} 
+
+html{ 
+    background: url("../images/green_dust_scratch.png"); 
+    background-repeat: repeat;
+} 

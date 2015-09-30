@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<title>Online Astroids</title>
+<style>
+    body{
+        margin: 0 0;
+        padding: 0 0;
+    }
+
+    #login_div{
+        background-color: rgba(255, 255, 255, 0.8);
+        position: absolute;
+        width: 400px;
+        height: 300px;
+        z-index: 1000;
+        text-align: center;
+        border-radius: 10px;
+    }
+    
+    .title{
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    #login_btn{
+        width: 100px;
+        height: 40px;
+        background-color: green;
+        border-radius: 10px;
+        cursor: pointer;
+        display: inline-block;
+        padding-top: 18px;
+    }
+
+    #login_btn:hover{
+        background-color: orange;
+    }
+
+    #register_btn{
+        width: 100px;
+        height: 40px;
+        background-color: yellow;
+        border-radius: 10px;
+        cursor: pointer;
+        display: inline-block;
+        padding-top: 18px;
+    }
+
+    #register_btn:hover{
+        background-color: red;
+    }
+
+    #username{
+        border-radius: 10px;
+        padding: 10px;
+        width: 100px;
+        height: 20px;
+    }
+
+    #password{
+        border-radius: 10px;
+        padding: 10px;
+        width: 100px;
+        height: 20px;
+    }
+
+    #message{
+        color: red;
+        font-size: 20px;
+    }
+</style>
+
+</head>
+    <body>
+        <canvas id="canvas"></canvas>
+
+        <div id="login_div">
+            <br><br><span class="title">AsteROIDS!</span><br><br>
+            <input id="username" type="text" placeholder="username">
+            <input id="password" type="password" placeholder="password">
+            <br><br>
+            <div id="message"></div>
+            <br>
+            <div id="login_btn">Login</div>
+            <div id="register_btn">Register</div>
+        </div>
+
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/client.min.js"></script>
+    </body>
+</html>

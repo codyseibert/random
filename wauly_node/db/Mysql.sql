@@ -1,0 +1,15 @@
+USE wauly;
+DROP DATABASE wauly;
+CREATE DATABASE wauly;
+USE wauly;
+
+CREATE TABLE logs
+(
+    id INT NOT NULL AUTO_INCREMENT,
+    message TEXT NOT NULL,
+    date DATETIME NOT NULL,
+
+    PRIMARY KEY (id)
+
+) ENGINE=InnoDB;
+

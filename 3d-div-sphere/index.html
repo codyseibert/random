@@ -1,0 +1,102 @@
+<style> 
+    body{
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+        background-color: black; 
+        color: white;
+    }
+    
+    .project{
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        background-color: rgba(200, 200, 200, .5);
+        color: white;
+        text-align: center;
+        left: 400px;
+        top: 300px;
+    }
+
+    .circle{
+        width: 700px;
+        height: 700px;
+        border-radius: 50%;
+        position: absolute;
+        background-color: rgba(255, 0, 0, 0.4);
+        left: 80px;
+        top: -20px;
+    }
+</style>
+
+<html>
+    <body>
+        <div class="circle"></div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/three.js/r68/three.min.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                if (!String.prototype.format) {
+                  String.prototype.format = function() {
+                    var args = arguments;
+                    return this.replace(/{(\d+)}/g, function(match, number) { 
+                      return typeof args[number] != 'undefined'
+                        ? args[number]
+                        : match
+                      ;
+                    });
+                  };
+                }
+
+                function getRandomColor() {
+                    var letters = '0123456789ABCDEF'.split('');
+                    var color = '#';
+                    for (var i = 0; i < 6; i++ ) {
+                        color += letters[Math.round(Math.random() * 15)];
+                    }
+                    return color;
+                }
+                
+                var refresh = function(){
+                    var theta = 0;
+                    var phi = 0;
+                    var thetaCount = 40;
+                    var phiCount = 20;
+                    for (var i = 0; i < thetaCount; i++){
+                        for (var j = 0; j < phiCount; j++){
+                            theta = (4 * Math.PI / thetaCount) * (j - thetaCount / 2);
+                            phi = (2 * Math.PI / phiCount) * (i - phiCount / 2);
+
+                            var r = 300;
+                            var x = r * Math.sin(theta) * Math.cos(phi) + r;
+                            var y = r * Math.sin(theta) * Math.sin(phi) + r;
+                            var z = r * Math.cos(theta);
+                    
+                            var zr = 180;
+                            if (z > 0) {
+                                zr = 0;
+                            }
+                            $div = $("<div></div>");
+                            $div.addClass("project");
+                            $div.css("background-color", getRandomColor());
+                            $div.css("-webkit-backface-visibility", "hidden");
+                            $div.css("-webkit-transform", "perspective({0}px) rotateY({1}rad) rotateX({2}rad) rotateZ({3}deg) translate3d({4}px, {5}px, {6}px)".format(
+                                    "600", 
+                                    theta, 
+                                    phi, 
+                                    zr,
+                                    "0", 
+                                    "0",
+                                    r));
+                            $div.html("TEST");
+                            $("body").append($div);
+                        }
+                    }
+                }
+                refresh();
+                
+            });
+        </script>
+    </body> 
+</html>
