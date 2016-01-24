@@ -1,0 +1,988 @@
+[INFO  - 2016-01-23T03:22:28.213Z] GhostDriver - Main - running on port 51147
+[INFO  - 2016-01-23T03:22:28.321Z] GhostDriver - Main - running on port 55076
+[INFO  - 2016-01-23T03:22:28.338Z] GhostDriver - Main - running on port 54707
+[INFO  - 2016-01-23T03:22:28.346Z] GhostDriver - Main - running on port 57878
+[INFO  - 2016-01-23T03:22:28.384Z] Session [87d8dfa0-c180-11e5-989c-ff5d99d4a67c] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":true}
+[INFO  - 2016-01-23T03:22:28.384Z] Session [87d8dfa0-c180-11e5-989c-ff5d99d4a67c] - page.customHeaders:  - {}
+[INFO  - 2016-01-23T03:22:28.385Z] Session [87d8dfa0-c180-11e5-989c-ff5d99d4a67c] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"mac-10.10 (Yosemite)-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-01-23T03:22:28.385Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 87d8dfa0-c180-11e5-989c-ff5d99d4a67c
+[INFO  - 2016-01-23T03:22:28.451Z] GhostDriver - Main - running on port 63197
+[INFO  - 2016-01-23T03:22:28.468Z] GhostDriver - Main - running on port 60014
+[INFO  - 2016-01-23T03:22:28.471Z] GhostDriver - Main - running on port 53929
+[ERROR - 2016-01-23T03:22:29.054Z] Session [87d8dfa0-c180-11e5-989c-ff5d99d4a67c] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:22:29.054Z] Session [87d8dfa0-c180-11e5-989c-ff5d99d4a67c] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:22:29.054Z] Session [87d8dfa0-c180-11e5-989c-ff5d99d4a67c] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:22:29.054Z] Session [87d8dfa0-c180-11e5-989c-ff5d99d4a67c] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:22:29.055Z] Session [87d8dfa0-c180-11e5-989c-ff5d99d4a67c] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:22:29.055Z] Session [87d8dfa0-c180-11e5-989c-ff5d99d4a67c] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:22:29.055Z] Session [87d8dfa0-c180-11e5-989c-ff5d99d4a67c] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:22:29.055Z] Session [87d8dfa0-c180-11e5-989c-ff5d99d4a67c] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[INFO  - 2016-01-23T03:22:29.369Z] Session [886fa160-c180-11e5-a6f9-9552f41380cb] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":true}
+[INFO  - 2016-01-23T03:22:29.369Z] Session [886fa160-c180-11e5-a6f9-9552f41380cb] - page.customHeaders:  - {}
+[INFO  - 2016-01-23T03:22:29.369Z] Session [886fa160-c180-11e5-a6f9-9552f41380cb] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"mac-10.10 (Yosemite)-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-01-23T03:22:29.369Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 886fa160-c180-11e5-a6f9-9552f41380cb
+[INFO  - 2016-01-23T03:22:29.412Z] Session [8875bbe0-c180-11e5-a9ff-0f35816dd893] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":true}
+[INFO  - 2016-01-23T03:22:29.412Z] Session [8875bbe0-c180-11e5-a9ff-0f35816dd893] - page.customHeaders:  - {}
+[INFO  - 2016-01-23T03:22:29.412Z] Session [8875bbe0-c180-11e5-a9ff-0f35816dd893] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"mac-10.10 (Yosemite)-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-01-23T03:22:29.412Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 8875bbe0-c180-11e5-a9ff-0f35816dd893
+[INFO  - 2016-01-23T03:22:29.413Z] Session [8875bbe0-c180-11e5-86eb-f7195668eff7] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":true}
+[INFO  - 2016-01-23T03:22:29.413Z] Session [887594d0-c180-11e5-9b6b-c9411c90bebb] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":true}
+[INFO  - 2016-01-23T03:22:29.414Z] Session [887594d0-c180-11e5-9b6b-c9411c90bebb] - page.customHeaders:  - {}
+[INFO  - 2016-01-23T03:22:29.414Z] Session [887594d0-c180-11e5-9b6b-c9411c90bebb] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"mac-10.10 (Yosemite)-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-01-23T03:22:29.414Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 887594d0-c180-11e5-9b6b-c9411c90bebb
+[INFO  - 2016-01-23T03:22:29.415Z] Session [8875bbe0-c180-11e5-86eb-f7195668eff7] - page.customHeaders:  - {}
+[INFO  - 2016-01-23T03:22:29.415Z] Session [8875bbe0-c180-11e5-86eb-f7195668eff7] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"mac-10.10 (Yosemite)-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-01-23T03:22:29.415Z] Session [88763110-c180-11e5-847a-75c8673fc462] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":true}
+[INFO  - 2016-01-23T03:22:29.415Z] Session [88763110-c180-11e5-847a-75c8673fc462] - page.customHeaders:  - {}
+[INFO  - 2016-01-23T03:22:29.415Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 8875bbe0-c180-11e5-86eb-f7195668eff7
+[INFO  - 2016-01-23T03:22:29.415Z] Session [88763110-c180-11e5-847a-75c8673fc462] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"mac-10.10 (Yosemite)-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-01-23T03:22:29.415Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 88763110-c180-11e5-847a-75c8673fc462
+[INFO  - 2016-01-23T03:22:29.442Z] Session [887a4fc0-c180-11e5-abf7-050f3313eb10] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":true}
+[INFO  - 2016-01-23T03:22:29.442Z] Session [887a4fc0-c180-11e5-abf7-050f3313eb10] - page.customHeaders:  - {}
+[INFO  - 2016-01-23T03:22:29.442Z] Session [887a4fc0-c180-11e5-abf7-050f3313eb10] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"mac-10.10 (Yosemite)-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-01-23T03:22:29.442Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 887a4fc0-c180-11e5-abf7-050f3313eb10
+[ERROR - 2016-01-23T03:22:30.012Z] Session [886fa160-c180-11e5-a6f9-9552f41380cb] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:22:30.012Z] Session [886fa160-c180-11e5-a6f9-9552f41380cb] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:22:30.013Z] Session [886fa160-c180-11e5-a6f9-9552f41380cb] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:22:30.013Z] Session [886fa160-c180-11e5-a6f9-9552f41380cb] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:22:30.013Z] Session [886fa160-c180-11e5-a6f9-9552f41380cb] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:22:30.013Z] Session [886fa160-c180-11e5-a6f9-9552f41380cb] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:22:30.019Z] Session [886fa160-c180-11e5-a6f9-9552f41380cb] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:22:30.019Z] Session [886fa160-c180-11e5-a6f9-9552f41380cb] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:22:30.023Z] Session [887594d0-c180-11e5-9b6b-c9411c90bebb] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:22:30.023Z] Session [887594d0-c180-11e5-9b6b-c9411c90bebb] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:22:30.024Z] Session [887594d0-c180-11e5-9b6b-c9411c90bebb] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:22:30.024Z] Session [887594d0-c180-11e5-9b6b-c9411c90bebb] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:22:30.024Z] Session [887594d0-c180-11e5-9b6b-c9411c90bebb] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:22:30.024Z] Session [887594d0-c180-11e5-9b6b-c9411c90bebb] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:22:30.024Z] Session [887594d0-c180-11e5-9b6b-c9411c90bebb] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:22:30.024Z] Session [887594d0-c180-11e5-9b6b-c9411c90bebb] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:22:30.039Z] Session [8875bbe0-c180-11e5-86eb-f7195668eff7] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:22:30.039Z] Session [8875bbe0-c180-11e5-86eb-f7195668eff7] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:22:30.039Z] Session [8875bbe0-c180-11e5-86eb-f7195668eff7] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:22:30.039Z] Session [8875bbe0-c180-11e5-86eb-f7195668eff7] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:22:30.040Z] Session [8875bbe0-c180-11e5-86eb-f7195668eff7] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:22:30.040Z] Session [8875bbe0-c180-11e5-86eb-f7195668eff7] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:22:30.040Z] Session [8875bbe0-c180-11e5-86eb-f7195668eff7] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:22:30.040Z] Session [8875bbe0-c180-11e5-86eb-f7195668eff7] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:22:30.107Z] Session [8875bbe0-c180-11e5-a9ff-0f35816dd893] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:22:30.107Z] Session [8875bbe0-c180-11e5-a9ff-0f35816dd893] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:22:30.107Z] Session [8875bbe0-c180-11e5-a9ff-0f35816dd893] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:22:30.108Z] Session [8875bbe0-c180-11e5-a9ff-0f35816dd893] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:22:30.108Z] Session [8875bbe0-c180-11e5-a9ff-0f35816dd893] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:22:30.108Z] Session [8875bbe0-c180-11e5-a9ff-0f35816dd893] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:22:30.108Z] Session [8875bbe0-c180-11e5-a9ff-0f35816dd893] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:22:30.108Z] Session [8875bbe0-c180-11e5-a9ff-0f35816dd893] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:22:30.133Z] Session [88763110-c180-11e5-847a-75c8673fc462] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:22:30.133Z] Session [88763110-c180-11e5-847a-75c8673fc462] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:22:30.133Z] Session [88763110-c180-11e5-847a-75c8673fc462] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:22:30.133Z] Session [88763110-c180-11e5-847a-75c8673fc462] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:22:30.133Z] Session [88763110-c180-11e5-847a-75c8673fc462] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:22:30.133Z] Session [88763110-c180-11e5-847a-75c8673fc462] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:22:30.134Z] Session [88763110-c180-11e5-847a-75c8673fc462] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:22:30.134Z] Session [88763110-c180-11e5-847a-75c8673fc462] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:22:30.362Z] Session [887a4fc0-c180-11e5-abf7-050f3313eb10] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:22:30.362Z] Session [887a4fc0-c180-11e5-abf7-050f3313eb10] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:22:30.363Z] Session [887a4fc0-c180-11e5-abf7-050f3313eb10] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:22:30.363Z] Session [887a4fc0-c180-11e5-abf7-050f3313eb10] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:22:30.363Z] Session [887a4fc0-c180-11e5-abf7-050f3313eb10] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:22:30.363Z] Session [887a4fc0-c180-11e5-abf7-050f3313eb10] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:22:30.363Z] Session [887a4fc0-c180-11e5-abf7-050f3313eb10] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:22:30.363Z] Session [887a4fc0-c180-11e5-abf7-050f3313eb10] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[INFO  - 2016-01-23T03:23:49.486Z] GhostDriver - Main - running on port 61730
+[INFO  - 2016-01-23T03:23:49.489Z] GhostDriver - Main - running on port 54255
+[INFO  - 2016-01-23T03:23:49.509Z] GhostDriver - Main - running on port 49603
+[INFO  - 2016-01-23T03:23:49.543Z] GhostDriver - Main - running on port 60262
+[INFO  - 2016-01-23T03:23:49.630Z] Session [b8454430-c180-11e5-af68-25334f145ac7] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":true}
+[INFO  - 2016-01-23T03:23:49.630Z] Session [b8454430-c180-11e5-af68-25334f145ac7] - page.customHeaders:  - {}
+[INFO  - 2016-01-23T03:23:49.630Z] Session [b8454430-c180-11e5-af68-25334f145ac7] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"mac-10.10 (Yosemite)-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-01-23T03:23:49.630Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: b8454430-c180-11e5-af68-25334f145ac7
+[INFO  - 2016-01-23T03:23:49.633Z] Session [b84655a0-c180-11e5-bbcd-7753dd10c030] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":true}
+[INFO  - 2016-01-23T03:23:49.633Z] Session [b84655a0-c180-11e5-bbcd-7753dd10c030] - page.customHeaders:  - {}
+[INFO  - 2016-01-23T03:23:49.633Z] Session [b84655a0-c180-11e5-bbcd-7753dd10c030] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"mac-10.10 (Yosemite)-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-01-23T03:23:49.634Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: b84655a0-c180-11e5-bbcd-7753dd10c030
+[INFO  - 2016-01-23T03:23:49.651Z] Session [b848edb0-c180-11e5-868a-9133c4edddb8] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":true}
+[INFO  - 2016-01-23T03:23:49.651Z] Session [b848edb0-c180-11e5-868a-9133c4edddb8] - page.customHeaders:  - {}
+[INFO  - 2016-01-23T03:23:49.652Z] Session [b848edb0-c180-11e5-868a-9133c4edddb8] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"mac-10.10 (Yosemite)-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-01-23T03:23:49.652Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: b848edb0-c180-11e5-868a-9133c4edddb8
+[INFO  - 2016-01-23T03:23:49.679Z] Session [b84d8190-c180-11e5-abee-cd5c39eb7925] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":true}
+[INFO  - 2016-01-23T03:23:49.679Z] Session [b84d8190-c180-11e5-abee-cd5c39eb7925] - page.customHeaders:  - {}
+[INFO  - 2016-01-23T03:23:49.679Z] Session [b84d8190-c180-11e5-abee-cd5c39eb7925] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"mac-10.10 (Yosemite)-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-01-23T03:23:49.679Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: b84d8190-c180-11e5-abee-cd5c39eb7925
+[INFO  - 2016-01-23T03:23:49.772Z] GhostDriver - Main - running on port 60548
+[INFO  - 2016-01-23T03:23:49.782Z] GhostDriver - Main - running on port 62804
+[INFO  - 2016-01-23T03:23:49.808Z] GhostDriver - Main - running on port 64324
+[INFO  - 2016-01-23T03:23:49.863Z] Session [b868d1c0-c180-11e5-8612-fdb50dcf068e] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":true}
+[INFO  - 2016-01-23T03:23:49.863Z] Session [b868d1c0-c180-11e5-8612-fdb50dcf068e] - page.customHeaders:  - {}
+[INFO  - 2016-01-23T03:23:49.863Z] Session [b868d1c0-c180-11e5-8612-fdb50dcf068e] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"mac-10.10 (Yosemite)-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-01-23T03:23:49.863Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: b868d1c0-c180-11e5-8612-fdb50dcf068e
+[INFO  - 2016-01-23T03:23:49.883Z] Session [b86b1bb0-c180-11e5-9b31-67f7d4b296fe] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":true}
+[INFO  - 2016-01-23T03:23:49.883Z] Session [b86b1bb0-c180-11e5-9b31-67f7d4b296fe] - page.customHeaders:  - {}
+[INFO  - 2016-01-23T03:23:49.883Z] Session [b86b1bb0-c180-11e5-9b31-67f7d4b296fe] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"mac-10.10 (Yosemite)-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-01-23T03:23:49.883Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: b86b1bb0-c180-11e5-9b31-67f7d4b296fe
+[INFO  - 2016-01-23T03:23:49.905Z] Session [b86ec530-c180-11e5-9fa4-11a61921d480] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":true}
+[INFO  - 2016-01-23T03:23:49.905Z] Session [b86ec530-c180-11e5-9fa4-11a61921d480] - page.customHeaders:  - {}
+[INFO  - 2016-01-23T03:23:49.906Z] Session [b86ec530-c180-11e5-9fa4-11a61921d480] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"mac-10.10 (Yosemite)-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-01-23T03:23:49.906Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: b86ec530-c180-11e5-9fa4-11a61921d480
+[ERROR - 2016-01-23T03:23:50.189Z] Session [b84d8190-c180-11e5-abee-cd5c39eb7925] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:23:50.189Z] Session [b84d8190-c180-11e5-abee-cd5c39eb7925] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:23:50.190Z] Session [b84d8190-c180-11e5-abee-cd5c39eb7925] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:23:50.190Z] Session [b84d8190-c180-11e5-abee-cd5c39eb7925] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:23:50.190Z] Session [b8454430-c180-11e5-af68-25334f145ac7] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:23:50.190Z] Session [b8454430-c180-11e5-af68-25334f145ac7] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:23:50.190Z] Session [b84d8190-c180-11e5-abee-cd5c39eb7925] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:23:50.190Z] Session [b84d8190-c180-11e5-abee-cd5c39eb7925] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:23:50.190Z] Session [b8454430-c180-11e5-af68-25334f145ac7] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:23:50.190Z] Session [b8454430-c180-11e5-af68-25334f145ac7] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:23:50.191Z] Session [b84d8190-c180-11e5-abee-cd5c39eb7925] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:23:50.191Z] Session [b84d8190-c180-11e5-abee-cd5c39eb7925] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:23:50.191Z] Session [b8454430-c180-11e5-af68-25334f145ac7] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:23:50.191Z] Session [b8454430-c180-11e5-af68-25334f145ac7] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:23:50.191Z] Session [b8454430-c180-11e5-af68-25334f145ac7] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:23:50.191Z] Session [b8454430-c180-11e5-af68-25334f145ac7] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:23:50.194Z] Session [b84655a0-c180-11e5-bbcd-7753dd10c030] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:23:50.194Z] Session [b84655a0-c180-11e5-bbcd-7753dd10c030] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:23:50.195Z] Session [b84655a0-c180-11e5-bbcd-7753dd10c030] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:23:50.195Z] Session [b84655a0-c180-11e5-bbcd-7753dd10c030] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:23:50.195Z] Session [b84655a0-c180-11e5-bbcd-7753dd10c030] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:23:50.195Z] Session [b84655a0-c180-11e5-bbcd-7753dd10c030] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:23:50.195Z] Session [b84655a0-c180-11e5-bbcd-7753dd10c030] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:23:50.195Z] Session [b84655a0-c180-11e5-bbcd-7753dd10c030] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:23:50.270Z] Session [b848edb0-c180-11e5-868a-9133c4edddb8] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:23:50.272Z] Session [b848edb0-c180-11e5-868a-9133c4edddb8] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:23:50.273Z] Session [b848edb0-c180-11e5-868a-9133c4edddb8] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:23:50.274Z] Session [b848edb0-c180-11e5-868a-9133c4edddb8] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:23:50.274Z] Session [b848edb0-c180-11e5-868a-9133c4edddb8] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:23:50.274Z] Session [b848edb0-c180-11e5-868a-9133c4edddb8] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:23:50.274Z] Session [b848edb0-c180-11e5-868a-9133c4edddb8] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:23:50.275Z] Session [b848edb0-c180-11e5-868a-9133c4edddb8] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:23:50.416Z] Session [b868d1c0-c180-11e5-8612-fdb50dcf068e] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:23:50.416Z] Session [b868d1c0-c180-11e5-8612-fdb50dcf068e] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:23:50.416Z] Session [b868d1c0-c180-11e5-8612-fdb50dcf068e] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:23:50.416Z] Session [b868d1c0-c180-11e5-8612-fdb50dcf068e] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:23:50.416Z] Session [b868d1c0-c180-11e5-8612-fdb50dcf068e] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:23:50.416Z] Session [b868d1c0-c180-11e5-8612-fdb50dcf068e] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:23:50.416Z] Session [b868d1c0-c180-11e5-8612-fdb50dcf068e] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:23:50.416Z] Session [b868d1c0-c180-11e5-8612-fdb50dcf068e] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:23:50.464Z] Session [b86b1bb0-c180-11e5-9b31-67f7d4b296fe] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:23:50.464Z] Session [b86b1bb0-c180-11e5-9b31-67f7d4b296fe] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:23:50.465Z] Session [b86b1bb0-c180-11e5-9b31-67f7d4b296fe] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:23:50.465Z] Session [b86b1bb0-c180-11e5-9b31-67f7d4b296fe] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:23:50.465Z] Session [b86b1bb0-c180-11e5-9b31-67f7d4b296fe] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:23:50.465Z] Session [b86b1bb0-c180-11e5-9b31-67f7d4b296fe] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:23:50.465Z] Session [b86b1bb0-c180-11e5-9b31-67f7d4b296fe] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:23:50.465Z] Session [b86b1bb0-c180-11e5-9b31-67f7d4b296fe] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:23:50.508Z] Session [b86ec530-c180-11e5-9fa4-11a61921d480] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:23:50.509Z] Session [b86ec530-c180-11e5-9fa4-11a61921d480] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:23:50.509Z] Session [b86ec530-c180-11e5-9fa4-11a61921d480] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:23:50.509Z] Session [b86ec530-c180-11e5-9fa4-11a61921d480] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:23:50.509Z] Session [b86ec530-c180-11e5-9fa4-11a61921d480] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:23:50.509Z] Session [b86ec530-c180-11e5-9fa4-11a61921d480] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:23:50.509Z] Session [b86ec530-c180-11e5-9fa4-11a61921d480] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:23:50.509Z] Session [b86ec530-c180-11e5-9fa4-11a61921d480] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[INFO  - 2016-01-23T03:25:20.949Z] GhostDriver - Main - running on port 52599
+[INFO  - 2016-01-23T03:25:21.011Z] Session [eebe1f00-c180-11e5-8e16-e51fdb23d08b] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":true}
+[INFO  - 2016-01-23T03:25:21.011Z] Session [eebe1f00-c180-11e5-8e16-e51fdb23d08b] - page.customHeaders:  - {}
+[INFO  - 2016-01-23T03:25:21.011Z] Session [eebe1f00-c180-11e5-8e16-e51fdb23d08b] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"mac-10.10 (Yosemite)-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-01-23T03:25:21.011Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: eebe1f00-c180-11e5-8e16-e51fdb23d08b
+[ERROR - 2016-01-23T03:25:21.365Z] Session [eebe1f00-c180-11e5-8e16-e51fdb23d08b] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:25:21.365Z] Session [eebe1f00-c180-11e5-8e16-e51fdb23d08b] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:25:21.365Z] Session [eebe1f00-c180-11e5-8e16-e51fdb23d08b] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:25:21.365Z] Session [eebe1f00-c180-11e5-8e16-e51fdb23d08b] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:25:21.365Z] Session [eebe1f00-c180-11e5-8e16-e51fdb23d08b] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:25:21.365Z] Session [eebe1f00-c180-11e5-8e16-e51fdb23d08b] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:25:21.365Z] Session [eebe1f00-c180-11e5-8e16-e51fdb23d08b] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:25:21.365Z] Session [eebe1f00-c180-11e5-8e16-e51fdb23d08b] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[INFO  - 2016-01-23T03:27:37.289Z] GhostDriver - Main - running on port 61306
+[INFO  - 2016-01-23T03:27:37.336Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":true}
+[INFO  - 2016-01-23T03:27:37.336Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.customHeaders:  - {}
+[INFO  - 2016-01-23T03:27:37.336Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"mac-10.10 (Yosemite)-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-01-23T03:27:37.336Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 3fff8340-c181-11e5-baaa-a9bdea73f55e
+[ERROR - 2016-01-23T03:27:37.947Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:27:37.947Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:27:37.947Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:27:37.947Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:27:37.947Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:27:37.947Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:27:37.947Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:27:37.947Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:27:48.328Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - msg: TypeError: 'undefined' is not a function (evaluating 'a({})')
+[ERROR - 2016-01-23T03:27:48.329Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.0/parsley.min.js:9)
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.0/parsley.min.js:9)
+[ERROR - 2016-01-23T03:27:48.329Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:27:48.329Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/jquery.noty.js:323)
+[ERROR - 2016-01-23T03:27:48.329Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:27:48.329Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/layouts/top.js:1)
+[ERROR - 2016-01-23T03:27:48.330Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:27:48.330Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/themes/relax.js:1)
+[ERROR - 2016-01-23T03:27:48.330Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:27:48.331Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/noty.js:1)
+[ERROR - 2016-01-23T03:27:48.331Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:27:48.331Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/csrf.js:1)
+[ERROR - 2016-01-23T03:27:48.335Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - msg: TypeError: 'undefined' is not a function (evaluating 'a({})')
+[ERROR - 2016-01-23T03:27:48.335Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.0/parsley.min.js:9)
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.0/parsley.min.js:9)
+[ERROR - 2016-01-23T03:27:48.335Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:27:48.335Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/jquery.noty.js:323)
+[ERROR - 2016-01-23T03:27:48.335Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:27:48.335Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/layouts/top.js:1)
+[ERROR - 2016-01-23T03:27:48.336Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:27:48.336Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/themes/relax.js:1)
+[ERROR - 2016-01-23T03:27:48.336Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:27:48.336Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/noty.js:1)
+[ERROR - 2016-01-23T03:27:48.336Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:27:48.336Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/csrf.js:1)
+[ERROR - 2016-01-23T03:27:48.338Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:27:48.339Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/facebook.js:71)
+[ERROR - 2016-01-23T03:27:48.339Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:27:48.339Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/validate_user.js:21)
+[ERROR - 2016-01-23T03:27:48.339Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:27:48.339Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/login.js:9)
+[ERROR - 2016-01-23T03:27:48.368Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:27:48.368Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/login_iframe.js:20)
+[ERROR - 2016-01-23T03:27:48.387Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:27:48.387Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/facebook.js:71)
+[ERROR - 2016-01-23T03:27:48.388Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - msg: TypeError: 'undefined' is not an object (evaluating '$.extend')
+[ERROR - 2016-01-23T03:27:48.388Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/lib/dropdownify.js:36)
+  (anonymous function) (https://passport.twitch.tv/assets/js/lib/dropdownify.js:64)
+[ERROR - 2016-01-23T03:27:48.388Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:27:48.388Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/signup.js:62)
+[ERROR - 2016-01-23T03:27:48.389Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:27:48.389Z] Session [3fff8340-c181-11e5-baaa-a9bdea73f55e] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/signup_iframe.js:20)
+[ERROR - 2016-01-23T03:28:02.514Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1453519682470
+[INFO  - 2016-01-23T03:29:57.020Z] GhostDriver - Main - running on port 49359
+[INFO  - 2016-01-23T03:29:57.076Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":true}
+[INFO  - 2016-01-23T03:29:57.076Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.customHeaders:  - {}
+[INFO  - 2016-01-23T03:29:57.076Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"mac-10.10 (Yosemite)-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-01-23T03:29:57.076Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 934a2500-c181-11e5-bdd9-b9f3150badce
+[ERROR - 2016-01-23T03:29:57.667Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:29:57.667Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:29:57.667Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:29:57.667Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:29:57.667Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:29:57.667Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:29:57.668Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:29:57.668Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:30:05.904Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - msg: TypeError: 'undefined' is not a function (evaluating 'a({})')
+[ERROR - 2016-01-23T03:30:05.904Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.0/parsley.min.js:9)
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.0/parsley.min.js:9)
+[ERROR - 2016-01-23T03:30:05.905Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:30:05.905Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/jquery.noty.js:323)
+[ERROR - 2016-01-23T03:30:05.905Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:30:05.905Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/layouts/top.js:1)
+[ERROR - 2016-01-23T03:30:05.905Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:30:05.905Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/themes/relax.js:1)
+[ERROR - 2016-01-23T03:30:05.906Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:30:05.906Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/noty.js:1)
+[ERROR - 2016-01-23T03:30:05.906Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:30:05.906Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/csrf.js:1)
+[ERROR - 2016-01-23T03:30:05.910Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:30:05.910Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/facebook.js:71)
+[ERROR - 2016-01-23T03:30:05.910Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:30:05.910Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/validate_user.js:21)
+[ERROR - 2016-01-23T03:30:05.910Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:30:05.910Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/login.js:9)
+[ERROR - 2016-01-23T03:30:05.910Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:30:05.910Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/login_iframe.js:20)
+[ERROR - 2016-01-23T03:30:05.912Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - msg: TypeError: 'undefined' is not a function (evaluating 'a({})')
+[ERROR - 2016-01-23T03:30:05.912Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.0/parsley.min.js:9)
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.0/parsley.min.js:9)
+[ERROR - 2016-01-23T03:30:05.912Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:30:05.912Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/jquery.noty.js:323)
+[ERROR - 2016-01-23T03:30:05.913Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:30:05.913Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/layouts/top.js:1)
+[ERROR - 2016-01-23T03:30:05.913Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:30:05.913Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/themes/relax.js:1)
+[ERROR - 2016-01-23T03:30:05.913Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:30:05.913Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/noty.js:1)
+[ERROR - 2016-01-23T03:30:05.914Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:30:05.914Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/csrf.js:1)
+[ERROR - 2016-01-23T03:30:05.916Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:30:05.916Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/facebook.js:71)
+[ERROR - 2016-01-23T03:30:05.917Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - msg: TypeError: 'undefined' is not an object (evaluating '$.extend')
+[ERROR - 2016-01-23T03:30:05.917Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/lib/dropdownify.js:36)
+  (anonymous function) (https://passport.twitch.tv/assets/js/lib/dropdownify.js:64)
+[ERROR - 2016-01-23T03:30:05.918Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:30:05.918Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/signup.js:62)
+[ERROR - 2016-01-23T03:30:05.919Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:30:05.919Z] Session [934a2500-c181-11e5-bdd9-b9f3150badce] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/signup_iframe.js:20)
+[ERROR - 2016-01-23T03:30:19.780Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1453519819735
+[INFO  - 2016-01-23T03:32:41.769Z] GhostDriver - Main - running on port 63757
+[INFO  - 2016-01-23T03:32:41.816Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":true}
+[INFO  - 2016-01-23T03:32:41.816Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.customHeaders:  - {}
+[INFO  - 2016-01-23T03:32:41.816Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"mac-10.10 (Yosemite)-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-01-23T03:32:41.816Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: f57b7940-c181-11e5-a6f1-c789914b2ce4
+[ERROR - 2016-01-23T03:32:42.460Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:32:42.460Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:32:42.460Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:32:42.460Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:32:42.460Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:32:42.460Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:32:42.460Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - msg: NETWORK_ERR: XMLHttpRequest Exception 101: A network error occured in synchronous requests.
+[ERROR - 2016-01-23T03:32:42.460Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - stack:
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+  (anonymous function) (http://www-cdn.jtvnw.net/assets/global-389598cb961911fde40d07452f144315.js:30)
+[ERROR - 2016-01-23T03:32:50.192Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - msg: TypeError: 'undefined' is not a function (evaluating 'a({})')
+[ERROR - 2016-01-23T03:32:50.192Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.0/parsley.min.js:9)
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.0/parsley.min.js:9)
+[ERROR - 2016-01-23T03:32:50.193Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:32:50.193Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/jquery.noty.js:323)
+[ERROR - 2016-01-23T03:32:50.194Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:32:50.194Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/layouts/top.js:1)
+[ERROR - 2016-01-23T03:32:50.194Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:32:50.194Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/themes/relax.js:1)
+[ERROR - 2016-01-23T03:32:50.195Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:32:50.195Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/noty.js:1)
+[ERROR - 2016-01-23T03:32:50.195Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:32:50.195Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/csrf.js:1)
+[ERROR - 2016-01-23T03:32:50.198Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:32:50.198Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/facebook.js:71)
+[ERROR - 2016-01-23T03:32:50.198Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:32:50.198Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/validate_user.js:21)
+[ERROR - 2016-01-23T03:32:50.198Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:32:50.198Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/login.js:9)
+[ERROR - 2016-01-23T03:32:50.199Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:32:50.199Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/login_iframe.js:20)
+[ERROR - 2016-01-23T03:32:50.200Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - msg: TypeError: 'undefined' is not a function (evaluating 'a({})')
+[ERROR - 2016-01-23T03:32:50.200Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.0/parsley.min.js:9)
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.0/parsley.min.js:9)
+[ERROR - 2016-01-23T03:32:50.201Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:32:50.201Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/jquery.noty.js:323)
+[ERROR - 2016-01-23T03:32:50.201Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:32:50.201Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/layouts/top.js:1)
+[ERROR - 2016-01-23T03:32:50.201Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:32:50.201Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/themes/relax.js:1)
+[ERROR - 2016-01-23T03:32:50.202Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:32:50.202Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/noty.js:1)
+[ERROR - 2016-01-23T03:32:50.202Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:32:50.202Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/csrf.js:1)
+[ERROR - 2016-01-23T03:32:50.248Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:32:50.248Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/facebook.js:71)
+[ERROR - 2016-01-23T03:32:50.248Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - msg: TypeError: 'undefined' is not an object (evaluating '$.extend')
+[ERROR - 2016-01-23T03:32:50.248Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/lib/dropdownify.js:36)
+  (anonymous function) (https://passport.twitch.tv/assets/js/lib/dropdownify.js:64)
+[ERROR - 2016-01-23T03:32:50.248Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:32:50.248Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/signup.js:62)
+[ERROR - 2016-01-23T03:32:50.249Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:32:50.249Z] Session [f57b7940-c181-11e5-a6f1-c789914b2ce4] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/signup_iframe.js:20)
+[INFO  - 2016-01-23T03:37:26.790Z] GhostDriver - Main - running on port 52822
+[INFO  - 2016-01-23T03:37:26.853Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":false}
+[INFO  - 2016-01-23T03:37:26.853Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.customHeaders:  - {}
+[INFO  - 2016-01-23T03:37:26.854Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"mac-10.10 (Yosemite)-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-01-23T03:37:26.854Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 9f60d220-c182-11e5-a304-7f10451bfc95
+[ERROR - 2016-01-23T03:37:37.409Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - msg: TypeError: 'undefined' is not a function (evaluating 'a({})')
+[ERROR - 2016-01-23T03:37:37.409Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.0/parsley.min.js:9)
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.0/parsley.min.js:9)
+[ERROR - 2016-01-23T03:37:37.410Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:37:37.410Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/jquery.noty.js:323)
+[ERROR - 2016-01-23T03:37:37.410Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:37:37.410Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/layouts/top.js:1)
+[ERROR - 2016-01-23T03:37:37.410Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:37:37.410Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/themes/relax.js:1)
+[ERROR - 2016-01-23T03:37:37.411Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:37:37.411Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/noty.js:1)
+[ERROR - 2016-01-23T03:37:37.411Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:37:37.411Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/csrf.js:1)
+[ERROR - 2016-01-23T03:37:37.415Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - msg: TypeError: 'undefined' is not a function (evaluating 'a({})')
+[ERROR - 2016-01-23T03:37:37.415Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.0/parsley.min.js:9)
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.0/parsley.min.js:9)
+[ERROR - 2016-01-23T03:37:37.416Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:37:37.416Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/jquery.noty.js:323)
+[ERROR - 2016-01-23T03:37:37.416Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:37:37.416Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/layouts/top.js:1)
+[ERROR - 2016-01-23T03:37:37.416Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:37:37.416Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/themes/relax.js:1)
+[ERROR - 2016-01-23T03:37:37.416Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:37:37.416Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/noty.js:1)
+[ERROR - 2016-01-23T03:37:37.417Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:37:37.417Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/csrf.js:1)
+[ERROR - 2016-01-23T03:37:37.419Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:37:37.419Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/facebook.js:71)
+[ERROR - 2016-01-23T03:37:37.419Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:37:37.419Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/validate_user.js:21)
+[ERROR - 2016-01-23T03:37:37.419Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:37:37.419Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/login.js:9)
+[ERROR - 2016-01-23T03:37:37.419Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:37:37.420Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/login_iframe.js:20)
+[ERROR - 2016-01-23T03:37:37.444Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:37:37.444Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/facebook.js:71)
+[ERROR - 2016-01-23T03:37:37.445Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - msg: TypeError: 'undefined' is not an object (evaluating '$.extend')
+[ERROR - 2016-01-23T03:37:37.445Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/lib/dropdownify.js:36)
+  (anonymous function) (https://passport.twitch.tv/assets/js/lib/dropdownify.js:64)
+[ERROR - 2016-01-23T03:37:37.458Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:37:37.459Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/signup.js:62)
+[ERROR - 2016-01-23T03:37:37.472Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:37:37.472Z] Session [9f60d220-c182-11e5-a304-7f10451bfc95] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/signup_iframe.js:20)
+[INFO  - 2016-01-23T03:38:04.171Z] GhostDriver - Main - running on port 64187
+[INFO  - 2016-01-23T03:38:04.207Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":false}
+[INFO  - 2016-01-23T03:38:04.207Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.customHeaders:  - {}
+[INFO  - 2016-01-23T03:38:04.207Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"mac-10.10 (Yosemite)-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-01-23T03:38:04.207Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: b5a46fb0-c182-11e5-ab48-7ddf8f8fff52
+[ERROR - 2016-01-23T03:38:12.688Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - msg: TypeError: 'undefined' is not a function (evaluating 'a({})')
+[ERROR - 2016-01-23T03:38:12.688Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.0/parsley.min.js:9)
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.0/parsley.min.js:9)
+[ERROR - 2016-01-23T03:38:12.690Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:38:12.690Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/jquery.noty.js:323)
+[ERROR - 2016-01-23T03:38:12.690Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:38:12.690Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/layouts/top.js:1)
+[ERROR - 2016-01-23T03:38:12.690Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:38:12.690Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/themes/relax.js:1)
+[ERROR - 2016-01-23T03:38:12.691Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:38:12.691Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/noty.js:1)
+[ERROR - 2016-01-23T03:38:12.691Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:38:12.691Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/csrf.js:1)
+[ERROR - 2016-01-23T03:38:12.695Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - msg: TypeError: 'undefined' is not a function (evaluating 'a({})')
+[ERROR - 2016-01-23T03:38:12.695Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.0/parsley.min.js:9)
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.0/parsley.min.js:9)
+[ERROR - 2016-01-23T03:38:12.696Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:38:12.696Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/jquery.noty.js:323)
+[ERROR - 2016-01-23T03:38:12.696Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:38:12.696Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/layouts/top.js:1)
+[ERROR - 2016-01-23T03:38:12.696Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:38:12.696Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/themes/relax.js:1)
+[ERROR - 2016-01-23T03:38:12.697Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:38:12.697Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/noty.js:1)
+[ERROR - 2016-01-23T03:38:12.697Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:38:12.697Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/csrf.js:1)
+[ERROR - 2016-01-23T03:38:12.720Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:38:12.720Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/facebook.js:71)
+[ERROR - 2016-01-23T03:38:12.742Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:38:12.742Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/validate_user.js:21)
+[ERROR - 2016-01-23T03:38:12.742Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:38:12.742Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/login.js:9)
+[ERROR - 2016-01-23T03:38:12.747Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:38:12.747Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/login_iframe.js:20)
+[ERROR - 2016-01-23T03:38:12.751Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:38:12.751Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/facebook.js:71)
+[ERROR - 2016-01-23T03:38:12.751Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - msg: TypeError: 'undefined' is not an object (evaluating '$.extend')
+[ERROR - 2016-01-23T03:38:12.751Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/lib/dropdownify.js:36)
+  (anonymous function) (https://passport.twitch.tv/assets/js/lib/dropdownify.js:64)
+[ERROR - 2016-01-23T03:38:12.795Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:38:12.795Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/signup.js:62)
+[ERROR - 2016-01-23T03:38:12.812Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:38:12.812Z] Session [b5a46fb0-c182-11e5-ab48-7ddf8f8fff52] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/signup_iframe.js:20)
+[ERROR - 2016-01-23T03:38:26.529Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1453520306482
+[INFO  - 2016-01-23T03:39:01.875Z] GhostDriver - Main - running on port 57967
+[INFO  - 2016-01-23T03:39:01.942Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":false}
+[INFO  - 2016-01-23T03:39:01.942Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.customHeaders:  - {}
+[INFO  - 2016-01-23T03:39:01.942Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"mac-10.10 (Yosemite)-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-01-23T03:39:01.942Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: d80e4030-c182-11e5-9f82-55ce39532f32
+[ERROR - 2016-01-23T03:39:10.999Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - msg: TypeError: 'undefined' is not a function (evaluating 'a({})')
+[ERROR - 2016-01-23T03:39:10.999Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.0/parsley.min.js:9)
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.0/parsley.min.js:9)
+[ERROR - 2016-01-23T03:39:11.000Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:39:11.000Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/jquery.noty.js:323)
+[ERROR - 2016-01-23T03:39:11.000Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:39:11.000Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/layouts/top.js:1)
+[ERROR - 2016-01-23T03:39:11.001Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:39:11.001Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/themes/relax.js:1)
+[ERROR - 2016-01-23T03:39:11.001Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:39:11.001Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/noty.js:1)
+[ERROR - 2016-01-23T03:39:11.001Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:39:11.001Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/csrf.js:1)
+[ERROR - 2016-01-23T03:39:11.004Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:39:11.004Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/facebook.js:71)
+[ERROR - 2016-01-23T03:39:11.005Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:39:11.005Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/validate_user.js:21)
+[ERROR - 2016-01-23T03:39:11.005Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:39:11.005Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/login.js:9)
+[ERROR - 2016-01-23T03:39:11.006Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - msg: TypeError: 'undefined' is not a function (evaluating 'a({})')
+[ERROR - 2016-01-23T03:39:11.006Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.0/parsley.min.js:9)
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.0/parsley.min.js:9)
+[ERROR - 2016-01-23T03:39:11.007Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:39:11.007Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/jquery.noty.js:323)
+[ERROR - 2016-01-23T03:39:11.007Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:39:11.007Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/layouts/top.js:1)
+[ERROR - 2016-01-23T03:39:11.007Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:39:11.007Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/themes/relax.js:1)
+[ERROR - 2016-01-23T03:39:11.008Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:39:11.008Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/noty.js:1)
+[ERROR - 2016-01-23T03:39:11.008Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T03:39:11.008Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/csrf.js:1)
+[ERROR - 2016-01-23T03:39:11.014Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:39:11.014Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/facebook.js:71)
+[ERROR - 2016-01-23T03:39:11.014Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - msg: TypeError: 'undefined' is not an object (evaluating '$.extend')
+[ERROR - 2016-01-23T03:39:11.014Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/lib/dropdownify.js:36)
+  (anonymous function) (https://passport.twitch.tv/assets/js/lib/dropdownify.js:64)
+[ERROR - 2016-01-23T03:39:11.014Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:39:11.014Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/signup.js:62)
+[ERROR - 2016-01-23T03:39:11.015Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:39:11.015Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/login_iframe.js:20)
+[ERROR - 2016-01-23T03:39:11.015Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T03:39:11.015Z] Session [d80e4030-c182-11e5-9f82-55ce39532f32] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/signup_iframe.js:20)
+[ERROR - 2016-01-23T03:39:25.202Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1453520365145
+[INFO  - 2016-01-23T04:21:44.867Z] GhostDriver - Main - running on port 54680
+[INFO  - 2016-01-23T04:21:44.894Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":false}
+[INFO  - 2016-01-23T04:21:44.894Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.customHeaders:  - {}
+[INFO  - 2016-01-23T04:21:44.894Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"mac-10.10 (Yosemite)-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-01-23T04:21:44.894Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: cfb1b0b0-c188-11e5-ab9b-4d5b53b70865
+[ERROR - 2016-01-23T04:21:53.345Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - msg: TypeError: 'undefined' is not a function (evaluating 'a({})')
+[ERROR - 2016-01-23T04:21:53.345Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.0/parsley.min.js:9)
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.0/parsley.min.js:9)
+[ERROR - 2016-01-23T04:21:53.348Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T04:21:53.348Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/jquery.noty.js:323)
+[ERROR - 2016-01-23T04:21:53.348Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T04:21:53.348Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/layouts/top.js:1)
+[ERROR - 2016-01-23T04:21:53.349Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T04:21:53.349Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/themes/relax.js:1)
+[ERROR - 2016-01-23T04:21:53.350Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T04:21:53.351Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/noty.js:1)
+[ERROR - 2016-01-23T04:21:53.351Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T04:21:53.351Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/csrf.js:1)
+[ERROR - 2016-01-23T04:21:53.361Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T04:21:53.361Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/facebook.js:71)
+[ERROR - 2016-01-23T04:21:53.362Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T04:21:53.362Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/validate_user.js:21)
+[ERROR - 2016-01-23T04:21:53.362Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T04:21:53.362Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/login.js:9)
+[ERROR - 2016-01-23T04:21:53.362Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T04:21:53.363Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/login_iframe.js:20)
+[ERROR - 2016-01-23T04:21:53.372Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - msg: TypeError: 'undefined' is not a function (evaluating 'a({})')
+[ERROR - 2016-01-23T04:21:53.373Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.0/parsley.min.js:9)
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.0/parsley.min.js:9)
+[ERROR - 2016-01-23T04:21:53.376Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T04:21:53.376Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/jquery.noty.js:323)
+[ERROR - 2016-01-23T04:21:53.377Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T04:21:53.377Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/layouts/top.js:1)
+[ERROR - 2016-01-23T04:21:53.378Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T04:21:53.378Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - stack:
+  (anonymous function) (https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/themes/relax.js:1)
+[ERROR - 2016-01-23T04:21:53.379Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T04:21:53.379Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/noty.js:1)
+[ERROR - 2016-01-23T04:21:53.380Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2016-01-23T04:21:53.380Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/csrf.js:1)
+[ERROR - 2016-01-23T04:21:53.383Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T04:21:53.384Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/facebook.js:71)
+[ERROR - 2016-01-23T04:21:53.384Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - msg: TypeError: 'undefined' is not an object (evaluating '$.extend')
+[ERROR - 2016-01-23T04:21:53.384Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/lib/dropdownify.js:36)
+  (anonymous function) (https://passport.twitch.tv/assets/js/lib/dropdownify.js:64)
+[ERROR - 2016-01-23T04:21:53.385Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T04:21:53.385Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/signup.js:62)
+[ERROR - 2016-01-23T04:21:53.385Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2016-01-23T04:21:53.385Z] Session [cfb1b0b0-c188-11e5-ab9b-4d5b53b70865] - page.onError - stack:
+  (anonymous function) (https://passport.twitch.tv/assets/js/signup_iframe.js:20)
+[ERROR - 2016-01-23T04:22:07.481Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1453522927432

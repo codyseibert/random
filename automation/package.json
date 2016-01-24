@@ -1,0 +1,21 @@
+{
+  "name": "tmp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.1.1",
+    "irc": "^0.4.0",
+    "m3u8": "0.0.7",
+    "selenium-webdriver": "^2.48.2",
+    "tmi.js": "0.0.24",
+    "twitch-irc": "^1.2.7",
+    "twitch-url": "^1.0.0",
+    "wd": "^0.4.0"
+  }
+}
