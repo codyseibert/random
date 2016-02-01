@@ -1,0 +1,29 @@
+
+html
+  head
+    link(rel='stylesheet', href='app.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js')
+    script(src='lib/victor.js')
+    script(src='app.js')
+
+  body
+    svg#svg
+    .panel
+      form(
+        action=""
+      )
+        label.edit
+          input(
+            type="radio"
+            value="edit"
+            name="mode"
+          ) 
+          | Edit Mode
+        label.light
+          input(
+            type="radio"
+            value="light"
+            name="mode"
+          )
+          | Light Mode
+    
